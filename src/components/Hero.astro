@@ -1,0 +1,177 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+}
+
+const { 
+  title = "Wealth Management", 
+  subtitle = "Refined Excellence",
+  description = "We partner with discerning individuals and families to preserve, grow, and transfer wealth with sophisticated precision and unwavering discretion."
+} = Astro.props;
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
+  <!-- Subtle Background Animation -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-400 rounded-full mix-blend-multiply filter blur-xl animate-parallax"></div>
+    <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-gold-500 rounded-full mix-blend-multiply filter blur-xl animate-parallax" style="animation-delay: -10s;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
+    <!-- Subtitle with understated entrance -->
+    <div class="opacity-0 animate-fade-up">
+      <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Main Title with staggered animation -->
+    <div class="opacity-0 animate-fade-up-delay">
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight">
+        <span class="block title-words">
+          {title}
+        </span>
+      </h1>
+    </div>
+
+    <!-- Description with delayed entrance -->
+    <div class="opacity-0 animate-fade-up-delay-2">
+      <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans">
+        {description}
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- Go to Top Button -->
+  <button 
+    id="go-to-top"
+    class="fixed bottom-8 right-8 w-12 h-12 bg-black/30 backdrop-blur-lg border border-white/40 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-black/50 transition-all duration-300 transform hover:scale-110 z-40 opacity-0 pointer-events-none"
+    aria-label="Go to top"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
+    </svg>
+  </button>
+</section>
+
+<style>
+  /* Enhanced hover effects for title words */
+  h1 span {
+    transition: letter-spacing 0.3s ease-out;
+  }
+  
+  h1 span:hover {
+    letter-spacing: 0.03em;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1a2332;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8941f;
+  }
+</style>
+
+<script>
+  // Intersection Observer for scroll-triggered animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-up');
+      }
+    });
+  }, observerOptions);
+
+  // Split title into individual words for hover effects
+  document.addEventListener('DOMContentLoaded', () => {
+    const titleElement = document.querySelector('.title-words');
+    if (titleElement) {
+      const text = titleElement.textContent;
+      if (text) {
+        const words = text.split(' ');
+        titleElement.innerHTML = words.map((word, index) => 
+          `<span class="inline-block hover:text-gold-400 transition-colors duration-700 ease-out word-${index}" style="animation-delay: ${index * 0.1}s">${word}</span>`
+        ).join('<span class="inline-block w-4"></span>');
+      }
+    }
+  });
+
+  // Enhanced smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e: Event) => {
+      e.preventDefault();
+      const href = (anchor as HTMLAnchorElement).getAttribute('href');
+      if (href) {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+
+  // Parallax effect for background elements
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('[data-parallax]');
+    
+    parallaxElements.forEach(element => {
+      const speedAttr = element.getAttribute('data-parallax');
+      const speed = speedAttr ? parseFloat(speedAttr) : 0.5;
+      const yPos = -(scrolled * speed);
+      (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+    });
+
+    // Show/hide go-to-top button
+    const goToTopButton = document.getElementById('go-to-top');
+    if (goToTopButton) {
+      if (scrolled > 300) {
+        goToTopButton.style.opacity = '1';
+        goToTopButton.style.pointerEvents = 'auto';
+      } else {
+        goToTopButton.style.opacity = '0';
+        goToTopButton.style.pointerEvents = 'none';
+      }
+    }
+  });
+
+  // Go to top functionality
+  const goToTopButton = document.getElementById('go-to-top');
+  if (goToTopButton) {
+    goToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+</script>

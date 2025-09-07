@@ -1,0 +1,53 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  className?: string;
+  id?: string;
+  children?: any;
+}
+
+const { 
+  title,
+  subtitle,
+  description,
+  className = "",
+  id,
+  children
+} = Astro.props;
+---
+
+<section class={`py-20 ${className}`} id={id}>
+  <div class="max-w-7xl mx-auto px-6">
+    {(title || subtitle || description) && (
+      <div class="text-center mb-16">
+        {subtitle && (
+          <p class="text-gold-500 text-sm uppercase tracking-[0.2em] font-medium mb-4 font-sans opacity-0 animate-fade-up">
+            {subtitle}
+          </p>
+        )}
+        {title && (
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-navy-900 mb-6 opacity-0 animate-fade-up-delay">
+            {title}
+          </h2>
+        )}
+        {description && (
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light opacity-0 animate-fade-up-delay-2">
+            {description}
+          </p>
+        )}
+      </div>
+    )}
+    <div class="opacity-0 animate-fade-up-delay-2">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Ensure animations trigger on scroll */
+  section {
+    opacity: 1;
+  }
+</style>

@@ -1,0 +1,388 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout 
+  title="Services | Wealth Management, Estate Planning & Philanthropy"
+  description="Comprehensive wealth management services including investment advisory, estate planning, tax strategy, and philanthropic planning for discerning individuals and families."
+>
+  <Navigation />
+  
+  <!-- Breadcrumb -->
+  <Breadcrumb items={[{ name: "Services" }]} />
+  
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
+        Comprehensive Services
+      </p>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
+        <span class="block title-words">Sophisticated Wealth Solutions</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans opacity-0 animate-fade-up-delay-2">
+        Tailored strategies designed to preserve, grow, and transfer wealth across generations with unwavering precision and discretion.
+      </p>
+    </div>
+  </section>
+
+  <!-- Family Office Services -->
+  <Section 
+    title="Family Office Services"
+    subtitle="Comprehensive Wealth Management"
+    description="Dedicated family office solutions providing integrated wealth management, lifestyle services, and family governance for ultra-high-net-worth families."
+    className="bg-slate-50"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <Card 
+        title="Consolidated Reporting"
+        description="Comprehensive financial reporting that consolidates all family assets, investments, and liabilities into unified, easy-to-understand reports."
+        icon="chart"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Real-time portfolio performance tracking</li>
+          <li>• Multi-currency asset aggregation</li>
+          <li>• Customized reporting formats</li>
+          <li>• Regulatory compliance reporting</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Family Governance"
+        description="Structured governance frameworks to ensure smooth family decision-making, conflict resolution, and wealth transfer across generations."
+        icon="handshake"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Family constitution development</li>
+          <li>• Succession planning strategies</li>
+          <li>• Family meeting facilitation</li>
+          <li>• Next-generation education programs</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Investment Management"
+        description="Sophisticated investment strategies tailored to family objectives, including alternative investments and private market opportunities."
+        icon="trending"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Private equity and venture capital</li>
+          <li>• Real estate investments</li>
+          <li>• Hedge fund strategies</li>
+          <li>• Direct investment opportunities</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Lifestyle Management"
+        description="Concierge-level services to manage personal and family needs, allowing you to focus on what matters most."
+        icon="heart"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Property and asset management</li>
+          <li>• Travel and event coordination</li>
+          <li>• Staff management and payroll</li>
+          <li>• Personal security arrangements</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Risk Management"
+        description="Comprehensive risk assessment and mitigation strategies to protect family wealth across all asset classes and jurisdictions."
+        icon="shield"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Multi-asset risk analysis</li>
+          <li>• Insurance optimization</li>
+          <li>• Cybersecurity protection</li>
+          <li>• Reputation management</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Tax & Legal Coordination"
+        description="Seamless coordination with tax advisors and legal counsel to optimize tax efficiency and ensure compliance across jurisdictions."
+        icon="scale"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Multi-jurisdiction tax planning</li>
+          <li>• Trust and estate structuring</li>
+          <li>• Regulatory compliance</li>
+          <li>• Legal document coordination</li>
+        </ul>
+      </Card>
+    </div>
+    
+    <div class="text-center">
+      <a 
+        href="/contact" 
+        class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent group-hover:animate-pulse"></div>
+        <span class="relative z-10 flex items-center">
+          Discuss Your Family Office Needs
+          <svg class="ml-3 w-5 h-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </span>
+        <div class="absolute inset-0 rounded-xl border border-gold-300/50 group-hover:border-gold-200 transition-colors duration-300"></div>
+      </a>
+    </div>
+  </Section>
+
+  <!-- Core Services -->
+  <Section 
+    title="Additional Services"
+    subtitle="Our Expertise"
+    description="Complementary wealth management solutions tailored to your unique needs and long-term objectives."
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Card 
+        title="Wealth Management"
+        description="Comprehensive portfolio management and investment advisory services designed to preserve and grow your wealth while managing risk."
+        icon="briefcase"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Portfolio Construction & Management</li>
+          <li>• Risk Assessment & Mitigation</li>
+          <li>• Alternative Investments</li>
+          <li>• Performance Monitoring</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Estate Planning"
+        description="Sophisticated estate planning strategies to ensure seamless wealth transfer while minimizing tax implications and preserving family harmony."
+        icon="building"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Trust & Estate Design</li>
+          <li>• Tax Optimization Strategies</li>
+          <li>• Family Governance</li>
+          <li>• Legacy Planning</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Philanthropy"
+        description="Strategic philanthropic planning to maximize the impact of your charitable giving while achieving your personal and family objectives."
+        icon="handshake"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Charitable Foundation Setup</li>
+          <li>• Donor-Advised Funds</li>
+          <li>• Impact Measurement</li>
+          <li>• Family Philanthropy</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Tax Strategy"
+        description="Advanced tax planning and optimization strategies to minimize your tax burden while maximizing after-tax returns and wealth preservation."
+        icon="chart"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Tax-Loss Harvesting</li>
+          <li>• Asset Location Optimization</li>
+          <li>• Charitable Giving Strategies</li>
+          <li>• International Tax Planning</li>
+        </ul>
+      </Card>
+
+      <Card 
+        title="Investment Advisory"
+        description="Independent investment advice and portfolio management services focused on achieving your long-term financial objectives."
+        icon="trending"
+      >
+        <ul class="text-sm text-slate-500 space-y-2 mb-6">
+          <li>• Asset Allocation</li>
+          <li>• Manager Selection</li>
+          <li>• Due Diligence</li>
+          <li>• Performance Analysis</li>
+        </ul>
+      </Card>
+    </div>
+  </Section>
+
+  <!-- Process Section -->
+  <Section 
+    title="Our Process"
+    subtitle="How We Work"
+    description="A systematic approach to wealth management that ensures every aspect of your financial life is carefully considered and expertly managed."
+    className="bg-slate-50"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-navy-900 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-white text-2xl font-bold">1</span>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-navy-900 mb-4">Discovery</h3>
+        <p class="text-slate-600 leading-relaxed">We begin with a comprehensive understanding of your financial situation, goals, and values through detailed discovery sessions.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-navy-900 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-white text-2xl font-bold">2</span>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-navy-900 mb-4">Strategy</h3>
+        <p class="text-slate-600 leading-relaxed">We develop customized strategies tailored to your unique circumstances, risk tolerance, and long-term objectives.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-navy-900 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-white text-2xl font-bold">3</span>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-navy-900 mb-4">Implementation</h3>
+        <p class="text-slate-600 leading-relaxed">We execute your strategies with precision, coordinating with your existing advisors and ensuring seamless implementation.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-navy-900 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-white text-2xl font-bold">4</span>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-navy-900 mb-4">Monitoring</h3>
+        <p class="text-slate-600 leading-relaxed">We continuously monitor performance and adjust strategies as needed, keeping you informed with regular reporting.</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Specializations -->
+  <Section 
+    title="Specializations"
+    subtitle="Areas of Expertise"
+    description="Deep expertise in specialized areas that require sophisticated knowledge and experience."
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="space-y-8">
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3a3 3 0 013-3h3a3 3 0 013 3v3m-6-9V6a3 3 0 013-3h3a3 3 0 013 3v3"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-semibold text-navy-900 mb-2">Private Banking</h3>
+            <p class="text-slate-600 leading-relaxed">Exclusive banking services and credit solutions for high-net-worth individuals and families.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15l-1.5 18h-12L4.5 3zM9.75 9h4.5M9.75 12h4.5M9.75 15h4.5"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-semibold text-navy-900 mb-2">International Planning</h3>
+            <p class="text-slate-600 leading-relaxed">Cross-border wealth management and tax optimization for global families.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 3.2 3.2 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-semibold text-navy-900 mb-2">Business Succession</h3>
+            <p class="text-slate-600 leading-relaxed">Strategic planning for business ownership transitions and family business continuity.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-semibold text-navy-900 mb-2">Real Estate</h3>
+            <p class="text-slate-600 leading-relaxed">Investment and management strategies for real estate portfolios and property holdings.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97V18.75a2.25 2.25 0 01-2.25 2.25H7.5a2.25 2.25 0 01-2.25-2.25V4.97m13.5 0V3a2.25 2.25 0 00-2.25-2.25H7.5A2.25 2.25 0 005.25 3v1.97m13.5 0H5.25m0 0a2.25 2.25 0 00-2.25 2.25v12a2.25 2.25 0 002.25 2.25h12a2.25 2.25 0 002.25-2.25V7.5a2.25 2.25 0 00-2.25-2.25H5.25z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-semibold text-navy-900 mb-2">Legal Coordination</h3>
+            <p class="text-slate-600 leading-relaxed">Coordination with legal counsel for complex estate planning and wealth transfer strategies.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-semibold text-navy-900 mb-2">Risk Management</h3>
+            <p class="text-slate-600 leading-relaxed">Comprehensive risk assessment and mitigation strategies for all aspects of your wealth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section 
+    title="Ready to Discuss Your Needs?"
+    description="Schedule a confidential consultation to explore how our services can help achieve your wealth management objectives."
+    className="bg-gradient-to-br from-navy-900 to-slate-900 text-white"
+  >
+    <div class="text-center">
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a 
+          href="/contact" 
+          class="group inline-flex items-center px-8 py-4 bg-gold-500 text-navy-900 font-medium rounded-none hover:bg-gold-400 transition-all duration-300 ease-out transform hover:scale-105 font-sans tracking-wide"
+        >
+          <span>Schedule Consultation</span>
+          <svg class="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+        </a>
+        
+        <a 
+          href="/team" 
+          class="group inline-flex items-center px-8 py-4 border border-slate-400 text-slate-300 hover:text-white hover:border-gold-400 transition-all duration-300 ease-out font-sans tracking-wide"
+        >
+          <span>Meet Our Team</span>
+          <svg class="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </Section>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  // Split title into individual words for hover effects
+  document.addEventListener('DOMContentLoaded', () => {
+    const titleElement = document.querySelector('.title-words');
+    if (titleElement) {
+      const text = titleElement.textContent;
+      if (text) {
+        const words = text.split(' ');
+        titleElement.innerHTML = words.map((word, index) => 
+          `<span class="inline-block hover:text-gold-400 transition-colors duration-700 ease-out word-${index}" style="animation-delay: ${index * 0.1}s">${word}</span>`
+        ).join('<span class="inline-block w-4"></span>');
+      }
+    }
+  });
+</script>

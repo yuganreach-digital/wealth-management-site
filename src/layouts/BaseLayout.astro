@@ -1,0 +1,255 @@
+---
+import CookieConsent from '../components/CookieConsent.astro';
+import { ANALYTICS_CONFIG, isAnalyticsEnabled, getGATrackingId } from '../config/analytics';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  robots?: string;
+  keywords?: string;
+  author?: string;
+}
+
+const { 
+  title = "Refined Wealth Management", 
+  description = "Sophisticated wealth management services for discerning individuals and families. Preserve, grow, and transfer wealth with precision and discretion.",
+  ogImage = "/og-image.jpg",
+  robots = "index, follow",
+  keywords = "wealth management, estate planning, investment advisory, financial planning, family office, tax strategy, philanthropy",
+  author = "Refined Wealth Management"
+} = Astro.props;
+
+const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content={robots} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={Astro.site ? new URL(ogImage, Astro.site) : ogImage} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={Astro.site ? new URL(ogImage, Astro.site) : ogImage} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Refined Wealth Management",
+      "description": "Sophisticated wealth management services for discerning individuals and families. Preserve, grow, and transfer wealth with precision and discretion.",
+      "url": "https://yourwealthsite.com",
+      "logo": "https://yourwealthsite.com/favicon.svg",
+      "image": "https://yourwealthsite.com/og-image.jpg",
+      "telephone": "+1-555-0123",
+      "email": "info@yourwealthsite.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Financial District",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10004",
+        "addressCountry": "US"
+      },
+      "serviceType": [
+        "Wealth Management",
+        "Estate Planning", 
+        "Investment Advisory",
+        "Tax Strategy",
+        "Philanthropy",
+        "Family Office Services"
+      ],
+      "areaServed": "United States",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Wealth Management Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wealth Management",
+              "description": "Comprehensive portfolio management and investment advisory services"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Estate Planning",
+              "description": "Strategic estate planning and wealth transfer solutions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Investment Advisory",
+              "description": "Professional investment advice and portfolio management"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://linkedin.com/company/refined-wealth-management",
+        "https://twitter.com/refinedwealth"
+      ]
+    }
+    </script>
+  </head>
+  <body class="font-sans text-slate-900 antialiased m-0 p-0">
+    <slot />
+    
+    <!-- Cookie Consent Banner -->
+    <CookieConsent />
+    
+    <!-- Global Scripts -->
+    <script>
+      // Performance optimization: reduce motion for users who prefer it
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+      }
+      
+      // Add loaded class for CSS animations
+      window.addEventListener('load', () => {
+        document.body.classList.add('loaded');
+      });
+    </script>
+    
+    {isAnalyticsEnabled() && (
+      <>
+        <!-- Google Analytics Consent Mode -->
+        <script>
+          // Initialize consent mode with default denied state
+          window.dataLayer = window.dataLayer || [];
+          function gtag(...args: any[]){window.dataLayer.push(args);}
+          
+          gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'functionality_storage': 'denied',
+            'personalization_storage': 'denied',
+            'security_storage': 'granted'
+          });
+          
+          gtag('js', new Date());
+        </script>
+        
+        <!-- Google Analytics -->
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${getGATrackingId()}`}></script>
+        <script>
+          declare global {
+            interface Window {
+              dataLayer: any[];
+            }
+            function gtag(...args: any[]): void;
+          }
+          
+          gtag('config', '{getGATrackingId()}', {
+            page_title: document.title,
+            page_location: window.location.href
+          });
+        </script>
+      </>
+    )}
+    
+    <!-- Google Tag Manager (optional - replace with your GTM ID) -->
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+  </body>
+</html>
+
+<style is:global>
+  /* Global base styles */
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid #d4af37;
+    outline-offset: 2px;
+  }
+  
+  /* Selection styles */
+  ::selection {
+    background-color: #d4af37;
+    color: #1a2332;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f3f4;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8941f;
+  }
+</style>

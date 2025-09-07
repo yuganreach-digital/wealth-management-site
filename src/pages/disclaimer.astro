@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../components/Section.astro';
+---
+
+<BaseLayout title="Disclaimer - Wealth Management" description="Important disclaimers regarding our wealth management services, investment advice, and the risks associated with financial investments.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] bg-gradient-to-br from-navy-900 via-slate-800 to-navy-900 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute top-20 left-20 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl animate-pulse"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+        Disclaimer
+      </h1>
+      <p class="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        Important information about our services, investment risks, and regulatory disclosures.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <Section 
+    title=""
+    subtitle=""
+    className="py-20 bg-white"
+  >
+    <div class="max-w-4xl mx-auto prose prose-lg prose-slate">
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 mb-12">
+        <div class="flex items-start space-x-4">
+          <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-amber-800 mb-2">Important Notice</h3>
+            <p class="text-amber-700">
+              This website and the information contained herein are for informational purposes only and do not constitute investment advice, financial planning advice, or a recommendation to buy or sell any security. Past performance does not guarantee future results.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-2xl p-8 mb-12">
+        <p class="text-slate-600 text-center mb-0">
+          <strong>Last Updated:</strong> September 2025
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Investment Risks</h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        All investments carry risk, including the potential loss of principal. Past performance is not indicative of future results. Investment strategies and recommendations should be evaluated in the context of your individual circumstances, risk tolerance, and investment objectives.
+      </p>
+      <ul class="text-slate-600 leading-relaxed mb-8 space-y-2">
+        <li>• Market risk: The value of investments may fluctuate due to market conditions</li>
+        <li>• Credit risk: The possibility that issuers of securities may default</li>
+        <li>• Liquidity risk: The risk that investments cannot be sold quickly</li>
+        <li>• Interest rate risk: Changes in interest rates may affect investment values</li>
+        <li>• Currency risk: For international investments, currency fluctuations may impact returns</li>
+      </ul>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">No Guarantee of Results</h2>
+      <p class="text-slate-600 leading-relaxed mb-8">
+        We do not guarantee any specific investment results or outcomes. Wealth management involves inherent risks, and there is no assurance that our strategies will be successful or that clients will achieve their financial goals. Investment decisions should be made based on careful consideration of all relevant factors.
+      </p>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Regulatory Information</h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        Our firm is registered with appropriate regulatory authorities and operates in compliance with applicable laws and regulations. However, this website and our services may not be available in all jurisdictions. Investment advisory services are provided in accordance with applicable federal and state regulations.
+      </p>
+      <div class="bg-slate-50 rounded-lg p-6 mb-8">
+        <h4 class="font-semibold text-navy-900 mb-3">Regulatory Disclosures:</h4>
+        <ul class="text-slate-600 space-y-1">
+          <li>• <strong>SEC Registration:</strong> Investment Adviser Registration Depository (IARD) #801-12345</li>
+          <li>• <strong>FINRA Membership:</strong> Broker-Dealer #12345678</li>
+          <li>• <strong>State Registrations:</strong> Licensed in NY, CA, FL, TX, IL (additional states available upon request)</li>
+          <li>• <strong>Insurance Licenses:</strong> Life, Health, and Variable Annuity licenses in multiple states</li>
+          <li>• <strong>Professional Designations:</strong> CFP®, CFA®, CPA (where applicable)</li>
+        </ul>
+      </div>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+        <h4 class="font-semibold text-blue-900 mb-3">Important Regulatory Notice:</h4>
+        <p class="text-blue-800 text-sm">
+          This firm is a registered investment adviser with the Securities and Exchange Commission (SEC). Registration with the SEC does not imply a certain level of skill or training. For additional information about our services and fees, please review our Form ADV Part 2A (Firm Brochure) and Part 2B (Brochure Supplement) available upon request or on the SEC's website at www.adviserinfo.sec.gov.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Third-Party Information</h2>
+      <p class="text-slate-600 leading-relaxed mb-8">
+        This website may contain links to third-party websites or references to third-party information. We do not endorse or guarantee the accuracy, completeness, or reliability of such third-party content. Users should independently verify any information obtained from third-party sources.
+      </p>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Professional Advice</h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        The information provided on this website is not a substitute for professional financial, legal, or tax advice. Clients should consult with qualified professionals regarding their specific circumstances before making any financial decisions.
+      </p>
+      <ul class="text-slate-600 leading-relaxed mb-8 space-y-2">
+        <li>• Tax implications of investment strategies should be reviewed with a tax advisor</li>
+        <li>• Estate planning strategies should be coordinated with legal counsel</li>
+        <li>• Insurance needs should be evaluated with licensed insurance professionals</li>
+        <li>• Accounting matters should be discussed with certified public accountants</li>
+      </ul>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Limitation of Liability</h2>
+      <p class="text-slate-600 leading-relaxed mb-8">
+        To the maximum extent permitted by law, we shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use of this website or our services, including but not limited to investment losses, lost profits, or business interruption.
+      </p>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Client Relationship</h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        No client relationship is established by viewing this website or contacting us through this site. A formal client relationship is established only through the execution of appropriate client agreements and completion of our onboarding process.
+      </p>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Fees and Compensation</h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        Our fees are disclosed in our Form ADV Part 2A and client agreements. We may receive compensation from third parties in connection with certain investment products or services. Such compensation does not affect our fiduciary duty to act in your best interests.
+      </p>
+      <ul class="text-slate-600 leading-relaxed mb-8 space-y-2">
+        <li>• Advisory fees are typically based on assets under management</li>
+        <li>• Transaction fees may apply for certain investment activities</li>
+        <li>• Third-party fees (custodial, fund management) are passed through at cost</li>
+        <li>• Fee schedules are provided in writing before engagement</li>
+      </ul>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Conflicts of Interest</h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        We are committed to managing potential conflicts of interest in accordance with our fiduciary duty. Potential conflicts may arise from:
+      </p>
+      <ul class="text-slate-600 leading-relaxed mb-8 space-y-2">
+        <li>• Affiliated companies or related parties</li>
+        <li>• Proprietary investment products</li>
+        <li>• Revenue sharing arrangements</li>
+        <li>• Personal trading by firm personnel</li>
+      </ul>
+      <p class="text-slate-600 leading-relaxed mb-8">
+        All material conflicts are disclosed in writing, and we maintain policies and procedures to ensure client interests are protected.
+      </p>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Updates and Changes</h2>
+      <p class="text-slate-600 leading-relaxed mb-8">
+        We reserve the right to modify this disclaimer at any time without notice. Continued use of this website after changes constitutes acceptance of the modified terms. Clients will be notified of material changes to our services or terms through appropriate channels.
+      </p>
+
+      <h2 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Contact Information</h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        For questions about this disclaimer or our services, please contact us:
+      </p>
+      <div class="bg-slate-50 rounded-lg p-6">
+        <p class="text-slate-600 mb-2"><strong>Email:</strong> legal@wealthmanagement.com</p>
+        <p class="text-slate-600 mb-2"><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p class="text-slate-600 mb-0"><strong>Address:</strong> 123 Financial District, New York, NY 10004</p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-200">
+        <p class="text-sm text-slate-500 text-center">
+          This disclaimer is effective as of September 2025 and applies to all users of this website and our services.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <Footer />
+</BaseLayout>
