@@ -93,7 +93,7 @@ This document outlines all placeholders and client information required to compl
 - **Priority**: High
 
 **Regulatory Information**: Add compliance details
-- **Files**: `disclaimer.astro`, `privacy.astro`
+- **Files**: `disclaimer.astro`, `privacy.astro`, `terms.astro`
 - **Need**: Actual regulatory information, licenses, compliance details
 - **Priority**: Medium
 - **Status**: ✅ **UPDATED** - Now includes comprehensive regulatory framework with SEC, FINRA, and state registration placeholders
@@ -161,6 +161,7 @@ This document outlines all placeholders and client information required to compl
 - `src/pages/contact.astro` - Contact form, address
 - `src/pages/privacy.astro` - Address, compliance info
 - `src/pages/disclaimer.astro` - Address, regulatory info
+- `src/pages/terms.astro` - Terms of service, legal terms
 - `src/pages/team.astro` - Team member information
 - `src/pages/services.astro` - Service descriptions
 - `src/pages/index.astro` - Team overview, service overview

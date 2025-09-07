@@ -60,8 +60,10 @@
                                   ▼
                     ┌─────────────────────────────────────┐
                     │        LEGAL PAGES                  │
-                    │  Privacy Policy | Disclaimer        │
-                    │  (/privacy) | (/disclaimer)         │
+                    │  Privacy Policy | Disclaimer |      │
+                    │  Terms of Service                   │
+                    │  (/privacy) | (/disclaimer) |       │
+                    │  (/terms)                           │
                     │  ✅ GDPR 2025 Compliant            │
                     │  ✅ North American Privacy Laws     │
                     └─────────────────────────────────────┘
@@ -250,6 +252,7 @@ Authority     Consultation
 ### Footer Links
 - Privacy Policy ✅ **UPDATED** - GDPR 2025 compliant
 - Disclaimer ✅ **UPDATED** - Enhanced regulatory compliance
+- Terms of Service ✅ **NEW** - Comprehensive legal terms
 - Contact Information
 - Social Media (when added)
 - Cookie Preferences ✅ **NEW** - Granular cookie management
@@ -263,7 +266,7 @@ Level 1: Home (Overview)
 ├── Level 2: Team (Who we are)
 ├── Level 2: Philosophy (How we think)
 ├── Level 2: Contact (How to reach us)
-└── Level 2: Legal (Privacy/Disclaimer)
+└── Level 2: Legal (Privacy/Disclaimer/Terms)
 ```
 
 ### Content Depth
