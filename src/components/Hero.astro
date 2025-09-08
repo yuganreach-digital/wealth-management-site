@@ -69,9 +69,21 @@ const {
     letter-spacing: 0.03em;
   }
 
-  /* Smooth scroll behavior */
+  /* Enhanced smooth scroll behavior for all browsers */
   html {
     scroll-behavior: smooth;
+  }
+  
+  /* Force smooth scrolling for all elements */
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  /* Ensure scroll indicators are visible */
+  .scroll-indicator {
+    z-index: 50 !important;
+    position: fixed !important;
+    display: flex !important;
   }
 
   /* Custom scrollbar for webkit browsers */
@@ -123,21 +135,27 @@ const {
   });
 
   // Enhanced smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e: Event) => {
-      e.preventDefault();
-      const href = (anchor as HTMLAnchorElement).getAttribute('href');
-      if (href) {
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+  function setupSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e: Event) => {
+        e.preventDefault();
+        const href = (anchor as HTMLAnchorElement).getAttribute('href');
+        if (href) {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
         }
-      }
+      });
     });
-  });
+  }
+  
+  // Setup smooth scrolling immediately and after DOM updates
+  setupSmoothScrolling();
+  setTimeout(setupSmoothScrolling, 100);
 
   // Parallax effect for background elements
   window.addEventListener('scroll', () => {
@@ -165,13 +183,19 @@ const {
   });
 
   // Go to top functionality
-  const goToTopButton = document.getElementById('go-to-top');
-  if (goToTopButton) {
-    goToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+  function setupGoToTop() {
+    const goToTopButton = document.getElementById('go-to-top');
+    if (goToTopButton) {
+      goToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       });
-    });
+    }
   }
+  
+  // Setup go to top button
+  setupGoToTop();
+  setTimeout(setupGoToTop, 100);
 </script>

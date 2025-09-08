@@ -403,24 +403,26 @@ import Card from '../components/Card.astro';
 
 <style>
   .scroll-indicator {
-    position: fixed;
-    left: 50%;
-    bottom: 2rem;
-    transform: translateX(-50%);
-    z-index: 40;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 3rem;
-    height: 3rem;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.6);
-    animation: bounce 2s infinite;
+    position: fixed !important;
+    left: 50% !important;
+    bottom: 2rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 50 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    width: 3rem !important;
+    height: 3rem !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    animation: bounce 2s infinite !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   
   .scroll-indicator:hover {
@@ -489,14 +491,30 @@ import Card from '../components/Card.astro';
       }
     }
     
-    // Add click listeners to scroll indicators
-    const scrollIndicators = document.querySelectorAll('.scroll-indicator');
-    scrollIndicators.forEach(indicator => {
-      indicator.addEventListener('click', () => {
-        updateCurrentSection();
-        scrollToNextSection();
+    // Add click listeners to scroll indicators with enhanced functionality
+    function setupScrollIndicators() {
+      const scrollIndicators = document.querySelectorAll('.scroll-indicator');
+      scrollIndicators.forEach(indicator => {
+        // Remove any existing listeners to prevent duplicates
+        indicator.removeEventListener('click', handleScrollIndicatorClick);
+        indicator.addEventListener('click', handleScrollIndicatorClick);
+        
+        // Ensure visibility
+        (indicator as HTMLElement).style.display = 'flex';
+        (indicator as HTMLElement).style.opacity = '1';
+        (indicator as HTMLElement).style.visibility = 'visible';
       });
-    });
+    }
+    
+    function handleScrollIndicatorClick() {
+      updateCurrentSection();
+      scrollToNextSection();
+    }
+    
+    // Setup scroll indicators
+    setupScrollIndicators();
+    setTimeout(setupScrollIndicators, 100);
+    setTimeout(setupScrollIndicators, 500);
 
     // Handle direct hash navigation on page load
     if (window.location.hash) {
