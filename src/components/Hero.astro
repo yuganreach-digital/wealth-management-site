@@ -69,21 +69,9 @@ const {
     letter-spacing: 0.03em;
   }
 
-  /* Enhanced smooth scroll behavior for all browsers */
+  /* Smooth scroll behavior */
   html {
     scroll-behavior: smooth;
-  }
-  
-  /* Force smooth scrolling for all elements */
-  * {
-    scroll-behavior: smooth;
-  }
-  
-  /* Ensure scroll indicators are visible */
-  .scroll-indicator {
-    z-index: 50 !important;
-    position: fixed !important;
-    display: flex !important;
   }
 
   /* Custom scrollbar for webkit browsers */
@@ -135,27 +123,21 @@ const {
   });
 
   // Enhanced smooth scrolling for anchor links
-  function setupSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e: Event) => {
-        e.preventDefault();
-        const href = (anchor as HTMLAnchorElement).getAttribute('href');
-        if (href) {
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e: Event) => {
+      e.preventDefault();
+      const href = (anchor as HTMLAnchorElement).getAttribute('href');
+      if (href) {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
         }
-      });
+      }
     });
-  }
-  
-  // Setup smooth scrolling immediately and after DOM updates
-  setupSmoothScrolling();
-  setTimeout(setupSmoothScrolling, 100);
+  });
 
   // Parallax effect for background elements
   window.addEventListener('scroll', () => {

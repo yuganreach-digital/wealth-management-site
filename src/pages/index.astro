@@ -181,7 +181,7 @@ import Card from '../components/Card.astro';
     
     <div class="text-center mt-12">
       <a 
-        href="/services" 
+        href="/wealth-management-site/services" 
         class="group relative inline-flex items-center w-full sm:w-auto justify-center px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 active:scale-95 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden touch-manipulation"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -259,7 +259,7 @@ import Card from '../components/Card.astro';
     
     <div class="text-center mt-12">
       <a 
-        href="/team" 
+        href="/wealth-management-site/team" 
         class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -335,7 +335,7 @@ import Card from '../components/Card.astro';
     
     <div class="text-center mt-12">
       <a 
-        href="/philosophy" 
+        href="/wealth-management-site/philosophy" 
         class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -382,7 +382,7 @@ import Card from '../components/Card.astro';
   >
     <div class="text-center">
       <a 
-        href="/contact" 
+        href="/wealth-management-site/contact" 
         class="group relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-bold rounded-2xl hover:shadow-2xl hover:shadow-gold-500/40 transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-2 tracking-wide overflow-hidden"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -403,26 +403,24 @@ import Card from '../components/Card.astro';
 
 <style>
   .scroll-indicator {
-    position: fixed !important;
-    left: 50% !important;
-    bottom: 2rem !important;
-    transform: translateX(-50%) !important;
-    z-index: 50 !important;
-    cursor: pointer !important;
-    transition: all 0.3s ease !important;
-    width: 3rem !important;
-    height: 3rem !important;
-    background: rgba(0, 0, 0, 0.5) !important;
-    backdrop-filter: blur(16px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.6) !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: rgba(255, 255, 255, 0.8) !important;
-    animation: bounce 2s infinite !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    z-index: 40;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    animation: bounce 2s infinite;
   }
   
   .scroll-indicator:hover {
@@ -491,30 +489,14 @@ import Card from '../components/Card.astro';
       }
     }
     
-    // Add click listeners to scroll indicators with enhanced functionality
-    function setupScrollIndicators() {
-      const scrollIndicators = document.querySelectorAll('.scroll-indicator');
-      scrollIndicators.forEach(indicator => {
-        // Remove any existing listeners to prevent duplicates
-        indicator.removeEventListener('click', handleScrollIndicatorClick);
-        indicator.addEventListener('click', handleScrollIndicatorClick);
-        
-        // Ensure visibility
-        (indicator as HTMLElement).style.display = 'flex';
-        (indicator as HTMLElement).style.opacity = '1';
-        (indicator as HTMLElement).style.visibility = 'visible';
+    // Add click listeners to scroll indicators
+    const scrollIndicators = document.querySelectorAll('.scroll-indicator');
+    scrollIndicators.forEach(indicator => {
+      indicator.addEventListener('click', () => {
+        updateCurrentSection();
+        scrollToNextSection();
       });
-    }
-    
-    function handleScrollIndicatorClick() {
-      updateCurrentSection();
-      scrollToNextSection();
-    }
-    
-    // Setup scroll indicators
-    setupScrollIndicators();
-    setTimeout(setupScrollIndicators, 100);
-    setTimeout(setupScrollIndicators, 500);
+    });
 
     // Handle direct hash navigation on page load
     if (window.location.hash) {
