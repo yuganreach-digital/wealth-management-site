@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import Section from '../components/Section.astro';
 import Card from '../components/Card.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <BaseLayout 
@@ -13,32 +14,21 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 >
   <Navigation />
   
-  <!-- Breadcrumb -->
-  <Breadcrumb items={[{ name: "Team" }]} />
-  
   <!-- Hero Section -->
-  <section class="pt-32 pb-20 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
-        Our Team
-      </p>
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
-        <span class="block title-words">Experienced Professionals</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans opacity-0 animate-fade-up-delay-2">
-        Our team combines decades of experience with deep expertise in wealth management, estate planning, and sophisticated financial strategies.
-      </p>
-    </div>
-  </section>
+  <Hero 
+    title="Our Team"
+    subtitle="Experienced Professionals"
+    description="Our team combines decades of experience with deep expertise in wealth management, estate planning, and sophisticated financial strategies."
+  />
 
   <!-- Leadership Team -->
   <Section 
-    title="Leadership Team"
-    subtitle="Senior Partners"
-    description="Our senior leadership team brings together decades of experience in wealth management and financial services."
+    title="Our Team"
+    subtitle="Experienced Professionals"
+    description="Our team combines decades of experience with deep expertise in wealth management, estate planning, and sophisticated financial strategies."
   >
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-      <!-- Team Member 1 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+      <!-- Mary Chinniah -->
       <div class="group text-center">
         <div class="relative mb-8">
           <div class="w-64 h-64 mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-lg flex items-center justify-center overflow-hidden">
@@ -48,26 +38,23 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           </div>
           <div class="absolute inset-0 bg-gradient-to-br from-gold-500/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-        <h3 class="text-2xl font-serif font-semibold text-navy-900 mb-2">Alexander Sterling</h3>
-        <p class="text-gold-500 font-medium mb-4">Managing Partner & CEO</p>
+        <h3 class="text-2xl font-serif font-semibold text-navy-900 mb-2">Mary Chinniah</h3>
+        <p class="text-gold-500 font-medium mb-2">MBA BSc</p>
+        <p class="text-gold-500 font-medium mb-4">Director of Operations</p>
         <p class="text-slate-600 leading-relaxed mb-6">
-          With over 25 years of experience in wealth management, Alexander leads our firm's strategic vision and client relationships. He specializes in complex estate planning and family office services.
+          Mary brings extensive operational expertise to our team, ensuring seamless service delivery and maintaining the highest standards of client care across all our wealth management services.
         </p>
-        <div class="flex justify-center space-x-4">
-          <button class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center hover:bg-gold-500 hover:text-white transition-all duration-300" aria-label="Social media profile" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        <div class="flex justify-center">
+          <a href="mailto:Mary.Chinniah@AvitaFOS.com" class="inline-flex items-center px-6 py-3 bg-gold-500 text-navy-900 font-medium rounded-none hover:bg-gold-400 transition-all duration-300 ease-out font-sans tracking-wide">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-          </button>
-          <button class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center hover:bg-gold-500 hover:text-white transition-all duration-300" aria-label="Social media profile" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-            </svg>
-          </button>
+            Contact Mary
+          </a>
         </div>
       </div>
 
-      <!-- Team Member 2 -->
+      <!-- Jason Kinnear -->
       <div class="group text-center">
         <div class="relative mb-8">
           <div class="w-64 h-64 mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-lg flex items-center justify-center overflow-hidden">
@@ -77,26 +64,23 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           </div>
           <div class="absolute inset-0 bg-gradient-to-br from-gold-500/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-        <h3 class="text-2xl font-serif font-semibold text-navy-900 mb-2">Victoria Chen</h3>
-        <p class="text-gold-500 font-medium mb-4">Senior Partner & CIO</p>
+        <h3 class="text-2xl font-serif font-semibold text-navy-900 mb-2">Jason Kinnear</h3>
+        <p class="text-gold-500 font-medium mb-2">CPA, CA, CBV</p>
+        <p class="text-gold-500 font-medium mb-4">Family Office Services Manager</p>
         <p class="text-slate-600 leading-relaxed mb-6">
-          Victoria oversees our investment strategy and portfolio management. Her expertise in alternative investments and risk management has helped clients navigate complex market environments.
+          Jason specializes in comprehensive family office services, bringing his expertise in accounting, valuation, and strategic financial planning to help families manage their complex wealth structures.
         </p>
-        <div class="flex justify-center space-x-4">
-          <button class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center hover:bg-gold-500 hover:text-white transition-all duration-300" aria-label="Social media profile" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        <div class="flex justify-center">
+          <a href="mailto:Jason.Kinnear@AvitaFOS.com" class="inline-flex items-center px-6 py-3 bg-gold-500 text-navy-900 font-medium rounded-none hover:bg-gold-400 transition-all duration-300 ease-out font-sans tracking-wide">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-          </button>
-          <button class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center hover:bg-gold-500 hover:text-white transition-all duration-300" aria-label="Social media profile" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-            </svg>
-          </button>
+            Contact Jason
+          </a>
         </div>
       </div>
 
-      <!-- Team Member 3 -->
+      <!-- Emerita Mercado -->
       <div class="group text-center">
         <div class="relative mb-8">
           <div class="w-64 h-64 mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-lg flex items-center justify-center overflow-hidden">
@@ -106,77 +90,45 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           </div>
           <div class="absolute inset-0 bg-gradient-to-br from-gold-500/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-        <h3 class="text-2xl font-serif font-semibold text-navy-900 mb-2">James Montgomery</h3>
-        <p class="text-gold-500 font-medium mb-4">Senior Partner & Head of Estate Planning</p>
+        <h3 class="text-2xl font-serif font-semibold text-navy-900 mb-2">Emerita Mercado</h3>
+        <p class="text-gold-500 font-medium mb-2">CFP, TEP</p>
+        <p class="text-gold-500 font-medium mb-4">Financial Planner</p>
         <p class="text-slate-600 leading-relaxed mb-6">
-          James specializes in complex estate planning and wealth transfer strategies. His expertise in tax law and family governance has helped numerous families preserve their legacies.
+          Emerita provides comprehensive financial planning services with expertise in estate planning and trust administration. Her CFP and TEP designations ensure clients receive sophisticated, tax-efficient strategies.
         </p>
-        <div class="flex justify-center space-x-4">
-          <button class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center hover:bg-gold-500 hover:text-white transition-all duration-300" aria-label="Social media profile" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        <div class="flex justify-center">
+          <a href="mailto:Emerita.Mercado@AvitaFOS.com" class="inline-flex items-center px-6 py-3 bg-gold-500 text-navy-900 font-medium rounded-none hover:bg-gold-400 transition-all duration-300 ease-out font-sans tracking-wide">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-          </button>
-          <button class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center hover:bg-gold-500 hover:text-white transition-all duration-300" aria-label="Social media profile" disabled>
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-            </svg>
-          </button>
+            Contact Emerita
+          </a>
         </div>
       </div>
-    </div>
-  </Section>
 
-  <!-- Advisory Team -->
-  <Section 
-    title="Advisory Team"
-    subtitle="Specialized Expertise"
-    description="Our advisory team brings specialized knowledge in key areas of wealth management and financial planning."
-    className="bg-slate-50"
-  >
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="text-center">
-        <div class="w-20 h-20 bg-gradient-to-br from-gold-400 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
-          </svg>
+      <!-- Demelza Thomas -->
+      <div class="group text-center">
+        <div class="relative mb-8">
+          <div class="w-64 h-64 mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-lg flex items-center justify-center overflow-hidden">
+            <svg class="w-16 h-16 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+            </svg>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-br from-gold-500/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 mb-2">Sarah Williams</h3>
-        <p class="text-gold-500 text-sm font-medium mb-3">Tax Strategy Specialist</p>
-        <p class="text-slate-600 text-sm leading-relaxed">Expert in advanced tax planning and optimization strategies for high-net-worth individuals.</p>
-      </div>
-      
-      <div class="text-center">
-        <div class="w-20 h-20 bg-gradient-to-br from-gold-400 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3a3 3 0 013-3h3a3 3 0 013 3v3m-6-9V6a3 3 0 013-3h3a3 3 0 013 3v3"/>
-          </svg>
+        <h3 class="text-2xl font-serif font-semibold text-navy-900 mb-2">Demelza Thomas</h3>
+        <p class="text-gold-500 font-medium mb-4">Client Solutions</p>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Demelza focuses on delivering exceptional client experiences and solutions, ensuring that each client's unique needs are met with personalized service and attention to detail.
+        </p>
+        <div class="flex justify-center">
+          <a href="mailto:Demelza.Thomas@AvitaFOS.com" class="inline-flex items-center px-6 py-3 bg-gold-500 text-navy-900 font-medium rounded-none hover:bg-gold-400 transition-all duration-300 ease-out font-sans tracking-wide">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Contact Demelza
+          </a>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 mb-2">Michael Rodriguez</h3>
-        <p class="text-gold-500 text-sm font-medium mb-3">Estate Planning Attorney</p>
-        <p class="text-slate-600 text-sm leading-relaxed">Specializes in complex trust structures and multi-generational wealth transfer strategies.</p>
-      </div>
-      
-      <div class="text-center">
-        <div class="w-20 h-20 bg-gradient-to-br from-gold-400 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 mb-2">Emily Thompson</h3>
-        <p class="text-gold-500 text-sm font-medium mb-3">Philanthropy Advisor</p>
-        <p class="text-slate-600 text-sm leading-relaxed">Helps families develop and implement strategic philanthropic initiatives and charitable giving plans.</p>
-      </div>
-      
-      <div class="text-center">
-        <div class="w-20 h-20 bg-gradient-to-br from-gold-400 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15l-1.5 18h-12L4.5 3zM9.75 9h4.5M9.75 12h4.5M9.75 15h4.5"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 mb-2">David Kim</h3>
-        <p class="text-gold-500 text-sm font-medium mb-3">International Planning</p>
-        <p class="text-slate-600 text-sm leading-relaxed">Expert in cross-border wealth management and international tax optimization strategies.</p>
       </div>
     </div>
   </Section>
@@ -241,19 +193,3 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 
   <Footer />
 </BaseLayout>
-
-<script>
-  // Split title into individual words for hover effects
-  document.addEventListener('DOMContentLoaded', () => {
-    const titleElement = document.querySelector('.title-words');
-    if (titleElement) {
-      const text = titleElement.textContent;
-      if (text) {
-        const words = text.split(' ');
-        titleElement.innerHTML = words.map((word, index) => 
-          `<span class="inline-block hover:text-gold-400 transition-colors duration-700 ease-out word-${index}" style="animation-delay: ${index * 0.1}s">${word}</span>`
-        ).join('<span class="inline-block w-4"></span>');
-      }
-    }
-  });
-</script>

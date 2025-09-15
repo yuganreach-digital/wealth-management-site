@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import Section from '../components/Section.astro';
 import Card from '../components/Card.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <BaseLayout 
@@ -17,19 +18,11 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   <Breadcrumb items={[{ name: "Services" }]} />
   
   <!-- Hero Section -->
-  <section class="pt-32 pb-20 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
-        Comprehensive Services
-      </p>
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
-        <span class="block title-words">Sophisticated Wealth Solutions</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans opacity-0 animate-fade-up-delay-2">
-        Tailored strategies designed to preserve, grow, and transfer wealth across generations with unwavering precision and discretion.
-      </p>
-    </div>
-  </section>
+  <Hero 
+    title="Sophisticated Wealth Solutions"
+    subtitle="Comprehensive Services"
+    description="Tailored strategies designed to preserve, grow, and transfer wealth across generations with unwavering precision and discretion."
+  />
 
   <!-- Family Office Services -->
   <Section 
