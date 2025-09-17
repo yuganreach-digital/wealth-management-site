@@ -6,6 +6,9 @@ interface Props {
   className?: string;
   id?: string;
   children?: any;
+  titleColor?: string;
+  subtitleColor?: string;
+  descriptionColor?: string;
 }
 
 const { 
@@ -14,7 +17,10 @@ const {
   description,
   className = "",
   id,
-  children
+  children,
+  titleColor = "text-navy-900",
+  subtitleColor = "text-gold-500",
+  descriptionColor = "text-slate-600"
 } = Astro.props;
 ---
 
@@ -23,17 +29,17 @@ const {
     {(title || subtitle || description) && (
       <div class="text-center mb-16">
         {subtitle && (
-          <p class="text-gold-500 text-sm uppercase tracking-[0.2em] font-medium mb-4 font-sans opacity-0 animate-fade-up">
+          <p class={`${subtitleColor} text-sm uppercase tracking-[0.2em] font-medium mb-4 font-sans opacity-0 animate-fade-up`}>
             {subtitle}
           </p>
         )}
         {title && (
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-navy-900 mb-6 opacity-0 animate-fade-up-delay">
+          <h2 class={`text-4xl md:text-5xl lg:text-6xl font-serif ${titleColor} mb-6 opacity-0 animate-fade-up-delay`}>
             {title}
           </h2>
         )}
         {description && (
-          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light opacity-0 animate-fade-up-delay-2">
+          <p class={`text-xl ${descriptionColor} max-w-3xl mx-auto leading-relaxed font-light opacity-0 animate-fade-up-delay-2`}>
             {description}
           </p>
         )}
