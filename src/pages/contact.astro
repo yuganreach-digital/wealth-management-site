@@ -26,7 +26,12 @@ import Hero from '../components/Hero.astro';
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Contact Form -->
         <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 p-8 lg:p-12">
-          <form class="space-y-8" id="contact-form">
+          <form class="space-y-8" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <!-- Hidden honeypot field for spam protection -->
+            <div style="display: none;">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="group">
                 <label for="firstName" class="block text-sm font-serif font-semibold text-navy-900 mb-3">First Name</label>
@@ -320,49 +325,33 @@ import Hero from '../components/Hero.astro';
       });
     });
 
-    // Form submission handling
+    // Form submission handling for Netlify
     const contactForm = document.getElementById('contact-form') as HTMLFormElement;
     if (contactForm) {
-      contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Get form data
+      contactForm.addEventListener('submit', function(e) {
+        // Get form data for validation
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
         
-        // Get selected services
-        const serviceCheckboxes = contactForm.querySelectorAll('input[name="services"]:checked') as NodeListOf<HTMLInputElement>;
-        const selectedServices = Array.from(serviceCheckboxes).map(cb => cb.value);
-        
-        // Prepare data for API
-        const submitData = {
-          firstName: data.firstName,
-          lastName: data.lastName,
-          email: data.email,
-          phone: data.phone,
-          netWorth: data.netWorth,
-          services: selectedServices,
-          message: data.message
-        };
-        
         // Simple validation
-        if (!submitData.firstName || !submitData.lastName || !submitData.email) {
+        if (!data.firstName || !data.lastName || !data.email) {
+          e.preventDefault();
           showMessage('Please fill in all required fields.', 'error');
           return;
         }
         
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(submitData.email as string)) {
+        if (!emailRegex.test(data.email as string)) {
+          e.preventDefault();
           showMessage('Please enter a valid email address.', 'error');
           return;
         }
         
+        // Show loading state
         const submitButton = contactForm.querySelector('button[type="submit"]') as HTMLButtonElement;
         if (submitButton) {
           const originalText = submitButton.innerHTML;
-          
-          // Update button state
           submitButton.innerHTML = `
             <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-navy-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -372,31 +361,11 @@ import Hero from '../components/Hero.astro';
           `;
           submitButton.disabled = true;
           
-          try {
-            const response = await fetch('/api/contact', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(submitData)
-            });
-            
-            const result = await response.json();
-            
-            if (result.success) {
-              showMessage('Thank you for your interest! We will contact you within 24 hours to schedule your consultation.', 'success');
-              contactForm.reset();
-            } else {
-              showMessage(result.error || 'Something went wrong. Please try again.', 'error');
-            }
-          } catch (error) {
-            console.error('Form submission error:', error);
-            showMessage('Network error. Please check your connection and try again.', 'error');
-          } finally {
-            // Reset button state
+          // Reset button after a delay (form will submit normally)
+          setTimeout(() => {
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
-          }
+          }, 3000);
         }
       });
     }

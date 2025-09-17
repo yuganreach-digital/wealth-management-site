@@ -2,8 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://yuganreach-digital.github.io',
-  base: '/wealth-management-site',
+  site: 'https://your-site.netlify.app', // Update with your actual Netlify URL
   integrations: [tailwind()],
   output: 'static',
   build: {
