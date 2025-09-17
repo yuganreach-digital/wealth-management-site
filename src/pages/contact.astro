@@ -26,7 +26,7 @@ import Hero from '../components/Hero.astro';
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Contact Form -->
         <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 p-8 lg:p-12">
-          <form class="space-y-8" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <form class="space-y-8" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
             <!-- Hidden honeypot field for spam protection -->
             <div style="display: none;">
               <label>Don't fill this out if you're human: <input name="bot-field" /></label>
