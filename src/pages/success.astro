@@ -9,13 +9,15 @@ import Section from '../components/Section.astro';
   <Navigation />
   
   <!-- Success Hero Section -->
-  <Section 
-    title="Thank You!"
-    subtitle="Your Message Has Been Received"
-    description="We appreciate your interest in Avita Family Office Services and will respond to your inquiry within 24 hours."
-    className="py-32 bg-gradient-to-br from-navy-900 to-slate-800 text-white"
-  >
-    <div class="text-center max-w-4xl mx-auto">
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900 text-white">
+    <div class="text-center max-w-4xl mx-auto px-6">
+      <!-- Main Title -->
+      <h1 class="text-5xl md:text-6xl font-serif font-bold text-white mb-4">
+        Thank You!
+      </h1>
+      <p class="text-xl md:text-2xl text-gold-400 mb-8 font-medium">
+        Your Message Has Been Received
+      </p>
       <!-- Success Icon -->
       <div class="w-24 h-24 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
         <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -111,7 +113,7 @@ import Section from '../components/Section.astro';
         </a>
       </div>
     </div>
-  </Section>
+  </section>
 
   <!-- Contact Information -->
   <Section 
