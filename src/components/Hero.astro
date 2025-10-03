@@ -8,42 +8,47 @@ interface Props {
 const { 
   title = "Avita Family Office Services", 
   subtitle = "Sophisticated Excellence",
-  description = "We partner with discerning individuals and families to preserve, grow, and transfer wealth with sophisticated precision and unwavering discretion."
+  description = "We partner with Elite individuals and families to preserve, grow, and transfer wealth with sophisticated precision and unwavering discretion."
 } = Astro.props;
 ---
 
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
-  <!-- Subtle Background Animation -->
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-400 rounded-full mix-blend-multiply filter blur-xl animate-parallax"></div>
-    <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-gold-500 rounded-full mix-blend-multiply filter blur-xl animate-parallax" style="animation-delay: -10s;"></div>
+  <!-- Subtle Background Animation - pushed to corners -->
+  <div class="absolute inset-0 opacity-3">
+    <div class="absolute -top-10 -left-10 w-48 h-48 bg-gold-400 rounded-full mix-blend-multiply filter blur-2xl animate-parallax"></div>
+    <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-gold-500 rounded-full mix-blend-multiply filter blur-2xl animate-parallax" style="animation-delay: -10s;"></div>
   </div>
 
-  <!-- Main Content -->
-  <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
-    <!-- Subtitle with understated entrance -->
-    <div class="opacity-0 animate-fade-up">
-      <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans">
-        {subtitle}
-      </p>
-    </div>
+  <!-- Main Content with Logo and Divider Layout -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 pt-20">
+    <div class="hero-layout">
+      <!-- Logo Section -->
+      <div class="logo-section opacity-0 animate-fade-up">
+        <div class="logo-container">
+          <img 
+            src="/logo.png" 
+            alt="Avita Logo" 
+            class="logo-hero"
+          />
+        </div>
+        <p class="logo-subtitle">
+          {subtitle}
+        </p>
+      </div>
 
-    <!-- Main Title with staggered animation -->
-    <div class="opacity-0 animate-fade-up-delay">
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-8 leading-tight">
-        <span class="block title-words">
-          {title}
-        </span>
-      </h1>
-    </div>
+      <!-- Vertical Divider -->
+      <div class="divider opacity-0 animate-fade-up-delay"></div>
 
-    <!-- Description with delayed entrance -->
-    <div class="opacity-0 animate-fade-up-delay-2">
-      <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans">
-        {description}
-      </p>
+      <!-- Content Section -->
+      <div class="content-section">
+        <!-- Description with elegant entrance -->
+        <div class="opacity-0 animate-fade-up-delay">
+          <p class="text-xl md:text-2xl lg:text-3xl text-slate-300 leading-relaxed font-light font-sans max-w-3xl">
+            {description}
+          </p>
+        </div>
+      </div>
     </div>
-
   </div>
 
 
@@ -60,6 +65,191 @@ const {
 </section>
 
 <style>
+  /* Hero Layout - Logo | Divider | Content */
+  .hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    min-height: 70vh;
+  }
+
+  /* Logo Section */
+  .logo-section {
+    flex-shrink: 0;
+  }
+
+  /* Logo container with frosted glass effect over white */
+  .logo-container {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.95) 0%, 
+                rgba(250, 245, 235, 0.98) 50%,
+                rgba(255, 255, 255, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                0 0 50px rgba(212, 175, 55, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5),
+                inset 0 0 40px rgba(212, 175, 55, 0.05);
+    transition: all 0.5s ease-out;
+  }
+  
+  .logo-container:hover {
+    background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 1) 0%, 
+                rgba(252, 248, 240, 1) 50%,
+                rgba(255, 255, 255, 1) 100%);
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4),
+                0 0 70px rgba(212, 175, 55, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                inset 0 0 50px rgba(212, 175, 55, 0.08);
+    transform: translateY(-3px);
+  }
+
+  /* Logo styling - elegant and sophisticated */
+  .logo-hero {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.3)) 
+            drop-shadow(0 0 12px rgba(255, 255, 255, 0.2))
+            brightness(1.25) 
+            contrast(1.1);
+    transition: all 0.5s ease-out;
+  }
+  
+  .logo-container:hover .logo-hero {
+    filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.5)) 
+            drop-shadow(0 0 18px rgba(255, 255, 255, 0.3))
+            brightness(1.35) 
+            contrast(1.15);
+    transform: scale(1.05);
+  }
+
+  /* Logo subtitle - Sophisticated Excellence (outside the card) */
+  .logo-subtitle {
+    text-align: center;
+    color: #d4af37;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+    margin-top: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    transition: all 0.4s ease-out;
+  }
+
+  .logo-section:hover .logo-subtitle {
+    color: #f5d769;
+    letter-spacing: 0.3em;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  }
+
+  /* Vertical Divider */
+  .divider {
+    width: 2px;
+    height: 300px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(212, 175, 55, 0.4) 20%,
+      rgba(212, 175, 55, 0.8) 50%,
+      rgba(212, 175, 55, 0.4) 80%,
+      transparent
+    );
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3),
+                0 0 40px rgba(212, 175, 55, 0.15);
+    flex-shrink: 0;
+  }
+
+  /* Content Section - Left Aligned */
+  .content-section {
+    flex: 1;
+    text-align: left;
+  }
+
+  /* Responsive Layout */
+  @media (max-width: 1024px) {
+    .hero-layout {
+      gap: 2.5rem;
+    }
+    
+    .logo-hero {
+      max-width: 180px;
+    }
+    
+    .divider {
+      height: 250px;
+    }
+
+    .logo-container {
+      padding: 1.25rem 1.75rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-layout {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .content-section {
+      text-align: center;
+    }
+    
+    .content-section p,
+    .content-section h1 {
+      text-align: center;
+    }
+    
+    .divider {
+      width: 200px;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(212, 175, 55, 0.4) 20%,
+        rgba(212, 175, 55, 0.8) 50%,
+        rgba(212, 175, 55, 0.4) 80%,
+        transparent
+      );
+    }
+    
+    .logo-hero {
+      max-width: 160px;
+    }
+
+    .logo-container {
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-layout {
+      gap: 1.5rem;
+    }
+    
+    .divider {
+      width: 150px;
+    }
+    
+    .logo-hero {
+      max-width: 130px;
+    }
+
+    .logo-container {
+      padding: 0.875rem 1.25rem;
+      border-radius: 14px;
+    }
+  }
+
   /* Enhanced hover effects for title words */
   h1 span {
     transition: letter-spacing 0.3s ease-out;
