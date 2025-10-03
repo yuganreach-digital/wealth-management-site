@@ -1,4 +1,4 @@
-# Wealth Management Website - Site Layout & User Flow
+# AVITA Family Office Services - Site Layout & User Flow
 
 **Updated September 2025** - Includes comprehensive privacy compliance and cookie consent features
 
