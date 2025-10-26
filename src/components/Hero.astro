@@ -30,12 +30,14 @@ const {
                 : "text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-3 leading-tight"}>
                 {title}
               </h1>
-              <h2 class={isHomepage 
-                ? "text-3xl md:text-5xl lg:text-6xl font-serif text-gold-400 mb-8 leading-tight" 
-                : "text-2xl md:text-3xl lg:text-4xl font-serif text-gold-400 mb-8 leading-tight"} 
-                style="font-variant-ligatures: none;">
-                {subtitle}
-              </h2>
+              {subtitle && (
+                <h2 class={isHomepage 
+                  ? "text-3xl md:text-5xl lg:text-6xl font-serif text-gold-400 mb-8 leading-tight" 
+                  : "text-2xl md:text-3xl lg:text-4xl font-serif text-gold-400 mb-8 leading-tight"} 
+                  style="font-variant-ligatures: none;">
+                  {subtitle}
+                </h2>
+              )}
             </div>
 
     <!-- Description with delayed entrance -->
