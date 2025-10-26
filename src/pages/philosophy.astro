@@ -15,9 +15,6 @@ import Card from '../components/Card.astro';
   <!-- Hero Section -->
   <section class="pt-32 pb-20 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
-        Our Philosophy
-      </p>
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
         <span class="block title-words">Investment Excellence</span>
       </h1>
@@ -29,9 +26,7 @@ import Card from '../components/Card.astro';
 
   <!-- Core Philosophy -->
   <Section 
-    title="Core Investment Philosophy"
-    subtitle="Our Foundation"
-    description="The fundamental principles that guide every investment decision we make on behalf of our clients."
+    title="Investment Philosophy Overview"
   >
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <Card 
@@ -57,11 +52,10 @@ import Card from '../components/Card.astro';
   <!-- Investment Approach -->
   <Section 
     title="Our Investment Approach"
-    subtitle="Methodology"
     description="A systematic approach to portfolio construction and management that balances risk and return while meeting your specific objectives."
     className="bg-slate-50"
   >
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="max-w-4xl mx-auto">
       <div>
         <h3 class="text-3xl font-serif font-semibold text-navy-900 mb-8">Strategic Asset Allocation</h3>
         <div class="space-y-6">
@@ -106,52 +100,13 @@ import Card from '../components/Card.astro';
           </div>
         </div>
       </div>
-      
-      <div class="bg-white rounded-lg p-8 shadow-lg">
-        <h4 class="text-xl font-serif font-semibold text-navy-900 mb-6">Typical Asset Allocation</h4>
-        <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-slate-600">Equities</span>
-            <span class="text-navy-900 font-semibold">40-60%</span>
-          </div>
-          <div class="w-full bg-slate-200 rounded-full h-2">
-            <div class="bg-gold-500 h-2 rounded-full" style="width: 50%"></div>
-          </div>
-          
-          <div class="flex items-center justify-between">
-            <span class="text-slate-600">Fixed Income</span>
-            <span class="text-navy-900 font-semibold">20-40%</span>
-          </div>
-          <div class="w-full bg-slate-200 rounded-full h-2">
-            <div class="bg-gold-500 h-2 rounded-full" style="width: 30%"></div>
-          </div>
-          
-          <div class="flex items-center justify-between">
-            <span class="text-slate-600">Alternatives</span>
-            <span class="text-navy-900 font-semibold">10-20%</span>
-          </div>
-          <div class="w-full bg-slate-200 rounded-full h-2">
-            <div class="bg-gold-500 h-2 rounded-full" style="width: 15%"></div>
-          </div>
-          
-          <div class="flex items-center justify-between">
-            <span class="text-slate-600">Cash & Equivalents</span>
-            <span class="text-navy-900 font-semibold">5-15%</span>
-          </div>
-          <div class="w-full bg-slate-200 rounded-full h-2">
-            <div class="bg-gold-500 h-2 rounded-full" style="width: 5%"></div>
-          </div>
-        </div>
-        <p class="text-sm text-slate-500 mt-4 italic">*Allocations vary based on individual client circumstances and objectives</p>
-      </div>
     </div>
   </Section>
 
   <!-- Investment Principles -->
   <Section 
     title="Investment Principles"
-    subtitle="Our Guidelines"
-    description="The core principles that guide our investment decisions and portfolio management approach."
+    description=""
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
       <div class="space-y-8">
@@ -346,7 +301,7 @@ import Card from '../components/Card.astro';
   <!-- CTA Section -->
   <Section 
     title="Ready to Discuss Our Approach?"
-    description="Schedule a consultation to learn more about our investment philosophy and how it can help achieve your wealth management objectives."
+    description="Schedule a consultation to discuss how we can help preserve, grow, and transfer your wealth."
     className="bg-gradient-to-br from-navy-900 to-slate-900 text-white"
     titleColor="text-white"
     descriptionColor="text-slate-300"

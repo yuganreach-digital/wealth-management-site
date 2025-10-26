@@ -6,9 +6,9 @@ interface Props {
 }
 
 const { 
-  title = "Avita Family Office Services", 
-  subtitle = "Sophisticated Excellence",
-  description = "We partner with discerning individuals and families to preserve, grow, and transfer wealth with sophisticated precision and unwavering discretion."
+  title = "AVITA", 
+  subtitle = "Family Office Services",
+  description = "We partner with individuals and families to preserve, grow, and transfer wealth to future generations."
 } = Astro.props;
 ---
 
@@ -19,23 +19,17 @@ const {
     <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-gold-500 rounded-full mix-blend-multiply filter blur-xl animate-parallax" style="animation-delay: -10s;"></div>
   </div>
 
-  <!-- Main Content -->
-  <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
-    <!-- Subtitle with understated entrance -->
-    <div class="opacity-0 animate-fade-up">
-      <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans">
-        {subtitle}
-      </p>
-    </div>
-
-    <!-- Main Title with staggered animation -->
-    <div class="opacity-0 animate-fade-up-delay">
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-8 leading-tight">
-        <span class="block title-words">
-          {title}
-        </span>
-      </h1>
-    </div>
+          <!-- Main Content -->
+          <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
+            <!-- Main Title - Static, no animation for company name -->
+            <div>
+              <h1 class="text-8xl md:text-[10rem] lg:text-[14rem] font-serif text-white mb-4 leading-tight tracking-tight font-bold">
+                {title}
+              </h1>
+              <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif text-gold-400 mb-8 leading-tight">
+                {subtitle}
+              </h2>
+            </div>
 
     <!-- Description with delayed entrance -->
     <div class="opacity-0 animate-fade-up-delay-2">
@@ -60,15 +54,6 @@ const {
 </section>
 
 <style>
-  /* Enhanced hover effects for title words */
-  h1 span {
-    transition: letter-spacing 0.3s ease-out;
-  }
-  
-  h1 span:hover {
-    letter-spacing: 0.03em;
-  }
-
   /* Smooth scroll behavior */
   html {
     scroll-behavior: smooth;
@@ -108,19 +93,7 @@ const {
     });
   }, observerOptions);
 
-  // Split title into individual words for hover effects
-  document.addEventListener('DOMContentLoaded', () => {
-    const titleElement = document.querySelector('.title-words');
-    if (titleElement) {
-      const text = titleElement.textContent;
-      if (text) {
-        const words = text.split(' ');
-        titleElement.innerHTML = words.map((word, index) => 
-          `<span class="inline-block hover:text-gold-400 transition-colors duration-700 ease-out word-${index}" style="animation-delay: ${index * 0.1}s">${word}</span>`
-        ).join('<span class="inline-block w-4"></span>');
-      }
-    }
-  });
+  // Company name is now static, no need to split words
 
   // Enhanced smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
