@@ -34,6 +34,7 @@ export default {
         'fade-up': 'fadeUp 0.8s ease-out forwards',
         'fade-up-delay': 'fadeUp 0.8s ease-out 0.2s forwards',
         'fade-up-delay-2': 'fadeUp 0.8s ease-out 0.4s forwards',
+        'fade-up-delay-3': 'fadeUp 0.8s ease-out 0.6s forwards',
         'slide-up': 'slideUp 1s ease-out forwards',
         'parallax': 'parallax 20s ease-in-out infinite',
       },

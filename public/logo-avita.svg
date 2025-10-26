@@ -1,0 +1,11 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="60" rx="8" fill="#1a2332"/>
+  
+  <!-- Letter A -->
+  <path d="M30 15L20 45h6l1.5-4h11l1.5 4h6L30 15zm-3.5 18L30 20l3.5 13h-7z" fill="#d4af37"/>
+  
+  <!-- Text -->
+  <text x="50" y="25" font-family="Playfair Display, serif" font-size="18" font-weight="600" fill="#d4af37">AVITA</text>
+  <text x="50" y="40" font-family="Inter, sans-serif" font-size="10" font-weight="400" fill="#f8f9fa">FAMILY OFFICE SERVICES</text>
+</svg>
