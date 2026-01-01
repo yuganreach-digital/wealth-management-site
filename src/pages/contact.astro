@@ -6,20 +6,20 @@ import Section from '../components/Section.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="Contact Us - Wealth Management" description="Get in touch with our wealth management team for personalized financial planning and investment strategies.">
+<BaseLayout title="Contact Us - Interior Design Consultation" description="Get in touch with our design team to discuss your interior design project and schedule a consultation.">
   <Navigation />
   
   <!-- Hero Section -->
   <Hero 
-    title="Contact AVITA"
+    title="Contact Espresso Design House"
     subtitle="Get In Touch"
-    description="Best serving high net worth and ultra high net worth families. We are confident we have the expertise you need and look forward to connecting with you."
+    description="We're here to transform your space. Schedule a consultation to discuss your design vision and how we can bring it to life."
   />
 
   <!-- Contact Form Section -->
   <Section 
     title="Schedule Your Consultation"
-    subtitle="Let's discuss your financial goals and how we can help you achieve them"
+    subtitle="Let's discuss your design vision and how we can transform your space"
     className="py-20 bg-slate-50"
   >
     <div class="max-w-7xl mx-auto">
@@ -34,7 +34,7 @@ import Hero from '../components/Hero.astro';
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="group">
-                <label for="firstName" class="block text-sm font-serif font-semibold text-navy-900 mb-3">First Name</label>
+                <label for="firstName" class="block text-sm font-serif font-semibold text-espresso-900 mb-3">First Name</label>
                 <input 
                   type="text" 
                   id="firstName" 
@@ -45,7 +45,7 @@ import Hero from '../components/Hero.astro';
                 />
               </div>
               <div class="group">
-                <label for="lastName" class="block text-sm font-serif font-semibold text-navy-900 mb-3">Last Name</label>
+                <label for="lastName" class="block text-sm font-serif font-semibold text-espresso-900 mb-3">Last Name</label>
                 <input 
                   type="text" 
                   id="lastName" 
@@ -58,7 +58,7 @@ import Hero from '../components/Hero.astro';
             </div>
             
             <div class="group">
-              <label for="email" class="block text-sm font-serif font-semibold text-navy-900 mb-3">Email Address</label>
+              <label for="email" class="block text-sm font-serif font-semibold text-espresso-900 mb-3">Email Address</label>
               <input 
                 type="email" 
                 id="email" 
@@ -70,7 +70,7 @@ import Hero from '../components/Hero.astro';
             </div>
             
             <div class="group">
-              <label for="phone" class="block text-sm font-serif font-semibold text-navy-900 mb-3">Phone Number</label>
+              <label for="phone" class="block text-sm font-serif font-semibold text-espresso-900 mb-3">Phone Number</label>
               <input 
                 type="tel" 
                 id="phone" 
@@ -81,20 +81,20 @@ import Hero from '../components/Hero.astro';
             </div>
             
             <div class="group">
-              <label for="netWorth" class="block text-sm font-serif font-semibold text-navy-900 mb-3">Approximate Net Worth Range</label>
+              <label for="projectType" class="block text-sm font-serif font-semibold text-espresso-900 mb-3">Project Type</label>
               <div class="relative">
                 <select 
-                  id="netWorth" 
-                  name="netWorth"
+                  id="projectType" 
+                  name="projectType"
                   class="w-full pl-5 pr-12 py-4 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-gold-500/20 focus:border-gold-500 transition-all duration-300 bg-slate-50/50 hover:bg-white font-sans appearance-none cursor-pointer"
                 >
                   <option value="">Please select</option>
-                  <option value="under-1m">Less than $1M</option>
-                  <option value="1-5m">$1M - $5M</option>
-                  <option value="5-10m">$5M - $10M</option>
-                  <option value="10-25m">$10M - $25M</option>
-                  <option value="25-50m">$25M - $50M</option>
-                  <option value="50m+">$50M+</option>
+                  <option value="residential-full">Full Home Design</option>
+                  <option value="residential-room">Single Room Design</option>
+                  <option value="commercial-office">Office Space</option>
+                  <option value="commercial-retail">Retail Space</option>
+                  <option value="renovation">Renovation</option>
+                  <option value="consultation">Design Consultation</option>
                 </select>
                 <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
                   <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
@@ -105,65 +105,57 @@ import Hero from '../components/Hero.astro';
             </div>
             
             <div class="group">
-              <label class="block text-sm font-serif font-semibold text-navy-900 mb-4">Services of Interest</label>
+              <label class="block text-sm font-serif font-semibold text-espresso-900 mb-4">Design Services of Interest</label>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="wealth-management" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Wealth Management</span>
+                  <input type="checkbox" name="services" value="residential-design" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
+                  <span class="text-slate-700 font-medium group-hover:text-espresso-900">Residential Design</span>
                 </label>
                 <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="wealth-administration" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Wealth Administration</span>
+                  <input type="checkbox" name="services" value="commercial-design" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
+                  <span class="text-slate-700 font-medium group-hover:text-espresso-900">Commercial Design</span>
                 </label>
                 <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="estate-succession-planning" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Estate & Succession Planning</span>
+                  <input type="checkbox" name="services" value="space-planning" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
+                  <span class="text-slate-700 font-medium group-hover:text-espresso-900">Space Planning</span>
                 </label>
                 <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="tax-planning-compliance" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Tax Planning & Compliance</span>
+                  <input type="checkbox" name="services" value="custom-furniture" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
+                  <span class="text-slate-700 font-medium group-hover:text-espresso-900">Custom Furniture</span>
                 </label>
                 <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="lifestyle-management" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Lifestyle Management</span>
+                  <input type="checkbox" name="services" value="color-consultation" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
+                  <span class="text-slate-700 font-medium group-hover:text-espresso-900">Color Consultation</span>
                 </label>
                 <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="medical-concierge" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Medical Concierge</span>
+                  <input type="checkbox" name="services" value="project-management" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
+                  <span class="text-slate-700 font-medium group-hover:text-espresso-900">Project Management</span>
                 </label>
                 <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="philanthropy" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Philanthropy</span>
+                  <input type="checkbox" name="services" value="styling-finishing" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
+                  <span class="text-slate-700 font-medium group-hover:text-espresso-900">Styling & Finishing</span>
                 </label>
                 <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="family-governance" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Family Governance Planning</span>
-                </label>
-                <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="next-generation-services" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Next Generation Services</span>
-                </label>
-                <label class="flex items-center p-3 rounded-lg border-2 border-slate-200 hover:border-gold-300 hover:bg-gold-50/50 transition-all duration-300 cursor-pointer group">
-                  <input type="checkbox" name="services" value="travel-concierge" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
-                  <span class="text-slate-700 font-medium group-hover:text-navy-900">Travel Concierge</span>
+                  <input type="checkbox" name="services" value="renovation-design" class="mr-3 text-gold-500 focus:ring-gold-500 rounded border-2 border-slate-300">
+                  <span class="text-slate-700 font-medium group-hover:text-espresso-900">Renovation Design</span>
                 </label>
               </div>
             </div>
             
             <div class="group">
-              <label for="message" class="block text-sm font-serif font-semibold text-navy-900 mb-3">Message</label>
+              <label for="message" class="block text-sm font-serif font-semibold text-espresso-900 mb-3">Message</label>
               <textarea 
                 id="message" 
                 name="message" 
                 rows="5"
                 class="w-full px-5 py-4 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-gold-500/20 focus:border-gold-500 transition-all duration-300 resize-none bg-slate-50/50 hover:bg-white font-sans"
-                placeholder="Tell us about your financial goals and how we can help..."
+                placeholder="Tell us about your design vision, space, and how we can help transform it..."
               ></textarea>
             </div>
             
             <button 
               type="submit"
-              class="group relative w-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-bold py-5 px-8 rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 overflow-hidden"
+              class="group relative w-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-900 font-serif font-bold py-5 px-8 rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 overflow-hidden"
             >
               <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/80 to-transparent group-hover:animate-pulse"></div>
@@ -180,7 +172,7 @@ import Hero from '../components/Hero.astro';
         <!-- Contact Information -->
         <div class="space-y-8">
           <div class="bg-white rounded-2xl shadow-xl p-8">
-            <h3 class="text-2xl font-serif font-semibold text-navy-900 mb-6">Get In Touch</h3>
+            <h3 class="text-2xl font-serif font-semibold text-espresso-900 mb-6">Get In Touch</h3>
             <div class="space-y-6">
               <div class="flex items-start space-x-4">
                 <div class="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -189,8 +181,8 @@ import Hero from '../components/Hero.astro';
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-navy-900 mb-1">Phone</h4>
-                  <p class="text-slate-600">(+1) 647-340-9224</p>
+                  <h4 class="font-semibold text-espresso-900 mb-1">Phone</h4>
+                  <p class="text-slate-600">(+1) 555-0123</p>
                 </div>
               </div>
               
@@ -201,46 +193,46 @@ import Hero from '../components/Hero.astro';
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-navy-900 mb-1">Email</h4>
-                  <p class="text-slate-600">info@avitafos.com</p>
+                  <h4 class="font-semibold text-espresso-900 mb-1">Email</h4>
+                  <p class="text-slate-600">info@espressodesignhouse.com</p>
                 </div>
               </div>
               
             </div>
           </div>
           
-          <div class="bg-gradient-to-br from-navy-900 to-gold-500 rounded-2xl shadow-xl p-8 text-white">
-            <h3 class="text-2xl font-serif font-semibold mb-4">The Avita Difference</h3>
+          <div class="bg-gradient-to-br from-espresso-900 to-gold-500 rounded-2xl shadow-xl p-8 text-white">
+            <h3 class="text-2xl font-serif font-semibold mb-4">The Espresso Design House Difference</h3>
             <ul class="space-y-3">
               <li class="flex items-center space-x-3">
                 <svg class="w-5 h-5 text-gold-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
                 </svg>
-                <span>Decades of experience in asset management and estate planning</span>
+                <span>Decades of experience in interior design and space transformation</span>
               </li>
               <li class="flex items-center space-x-3">
                 <svg class="w-5 h-5 text-gold-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
                 </svg>
-                <span>Comprehensive tax strategy and philanthropy expertise</span>
+                <span>Comprehensive design services from concept to final styling</span>
               </li>
               <li class="flex items-center space-x-3">
                 <svg class="w-5 h-5 text-gold-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
                 </svg>
-                <span>Lifestyle management and medical concierge services</span>
+                <span>Premium materials and trusted vendor relationships</span>
               </li>
               <li class="flex items-center space-x-3">
                 <svg class="w-5 h-5 text-gold-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
                 </svg>
-                <span>Next generation mentoring and family governance</span>
+                <span>Personalized service tailored to your unique style and needs</span>
               </li>
               <li class="flex items-center space-x-3">
                 <svg class="w-5 h-5 text-gold-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
                 </svg>
-                <span>Trusted partners dedicated to preserving wealth for generations</span>
+                <span>Timeless designs that enhance your lifestyle for years to come</span>
               </li>
             </ul>
           </div>
@@ -252,20 +244,20 @@ import Hero from '../components/Hero.astro';
   <!-- CTA Section -->
   <Section 
     title="Ready to Begin?"
-    subtitle="Take the first step towards sophisticated wealth management"
-    className="py-20 bg-gradient-to-br from-navy-900 to-slate-800 text-white"
+    subtitle="Take the first step towards transforming your space"
+    className="py-20 bg-gradient-to-br from-espresso-900 to-espresso-950 text-white"
     titleColor="text-white"
     subtitleColor="text-gold-400"
     descriptionColor="text-slate-300"
   >
     <div class="text-center">
       <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-        Our team of experienced wealth managers is ready to help you achieve your financial goals with personalized strategies and sophisticated solutions.
+        Our team of experienced designers is ready to help you achieve your design vision with thoughtful solutions and beautiful results.
       </p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
         <a 
           href="#contact-form" 
-          class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
+          class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
         >
           <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent group-hover:animate-pulse"></div>
@@ -277,8 +269,8 @@ import Hero from '../components/Hero.astro';
           </span>
         </a>
         <a 
-          href="tel:+16473409224" 
-          class="group relative inline-flex items-center px-10 py-5 bg-transparent border-2 border-white/30 text-white hover:text-navy-900 font-serif font-semibold rounded-xl hover:shadow-xl hover:shadow-white/20 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
+          href="tel:+15550123" 
+          class="group relative inline-flex items-center px-10 py-5 bg-transparent border-2 border-white/30 text-white hover:text-espresso-900 font-serif font-semibold rounded-xl hover:shadow-xl hover:shadow-white/20 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
         >
           <div class="absolute inset-0 bg-gradient-to-r from-white via-gold-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
           <div class="absolute inset-0 border-2 border-gold-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -342,7 +334,7 @@ import Hero from '../components/Hero.astro';
         if (submitButton) {
           const originalText = submitButton.innerHTML;
           submitButton.innerHTML = `
-            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-navy-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-espresso-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>

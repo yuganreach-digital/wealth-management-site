@@ -1,0 +1,371 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../components/Section.astro';
+import Hero from '../components/Hero.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout 
+  title="Gallery | Project Portfolio | Espresso Design House"
+  description="Explore our portfolio of completed interior design projects. Residential, commercial, and hospitality spaces transformed with thoughtful design."
+>
+  <Navigation />
+  
+  <!-- Breadcrumb -->
+  <Breadcrumb items={[{ name: "Gallery" }]} />
+  
+  <!-- Hero Section -->
+  <Hero 
+    title="Project Gallery"
+    subtitle="Our Portfolio"
+    description="Explore our collection of completed projects showcasing diverse design styles and spaces we've transformed."
+  />
+
+  <!-- Filter Tabs -->
+  <Section 
+    className="bg-slate-50 py-8"
+  >
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button 
+          class="filter-btn active px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-gold-500 text-espresso-900 hover:bg-gold-400"
+          data-filter="all"
+        >
+          All Projects
+        </button>
+        <button 
+          class="filter-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-espresso-900 hover:bg-gold-50 border border-slate-200"
+          data-filter="completed"
+        >
+          Completed
+        </button>
+        <button 
+          class="filter-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-espresso-900 hover:bg-gold-50 border border-slate-200"
+          data-filter="ongoing"
+        >
+          Ongoing
+        </button>
+        <button 
+          class="filter-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-espresso-900 hover:bg-gold-50 border border-slate-200"
+          data-filter="residential"
+        >
+          Residential
+        </button>
+        <button 
+          class="filter-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-espresso-900 hover:bg-gold-50 border border-slate-200"
+          data-filter="villa"
+        >
+          Villa
+        </button>
+        <button 
+          class="filter-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-espresso-900 hover:bg-gold-50 border border-slate-200"
+          data-filter="flat"
+        >
+          Flat
+        </button>
+        <button 
+          class="filter-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-espresso-900 hover:bg-gold-50 border border-slate-200"
+          data-filter="individual"
+        >
+          Individual Home
+        </button>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Gallery Grid -->
+  <Section 
+    title=""
+    className="bg-slate-50"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+      <!-- Project 1: Chennai Flat Renovation -->
+      <a href="/gallery/modern-loft" class="gallery-item group block" data-category="completed flat renovation">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop" 
+            alt="Chennai Flat Renovation"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Chennai Flat Renovation</h3>
+              <p class="text-sm text-slate-300">Chettinad jaali work and minimalistic elegance in a 1200 sq ft flat.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Chennai Flat Renovation</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Flat • Renovation • ₹25L</p>
+        <p class="text-slate-600">Chettinad-inspired jaali work, natural light, and airy minimalistic design. Open-plan living with traditional South Indian elements.</p>
+      </a>
+
+      <!-- Project 2: Bangalore Villa Design -->
+      <a href="/gallery/luxury-penthouse" class="gallery-item group block" data-category="completed villa starting">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop" 
+            alt="Bangalore Villa Design"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Bangalore Villa Design</h3>
+              <p class="text-sm text-slate-300">Traditional Chettinad jaali work meets modern minimalism in a 3500 sq ft villa.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Bangalore Villa Design</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Villa • Starting Project • ₹85L</p>
+        <p class="text-slate-600">Chettinad jaali patterns, Athangudi tiles, and teak wood create an elegant blend of traditional South Indian heritage with contemporary design.</p>
+      </a>
+
+      <!-- Project 3: Salem Individual Home -->
+      <a href="/gallery/corporate-headquarters" class="gallery-item group block" data-category="ongoing individual starting">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" 
+            alt="Salem Individual Home"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Ongoing</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Salem Individual Home</h3>
+              <p class="text-sm text-slate-300">Traditional South Indian architecture with Chettinad jaali and courtyards.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Salem Individual Home</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Individual Home • Starting Project • ₹65L</p>
+        <p class="text-slate-600">Traditional courtyard planning with Chettinad jaali screens, natural light, and cross-ventilation. Modern comfort meets heritage design.</p>
+      </a>
+
+      <!-- Project 4: Karur Flat Renovation -->
+      <a href="/gallery/coastal-retreat" class="gallery-item group block" data-category="completed flat renovation">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop" 
+            alt="Karur Flat Renovation"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Karur Flat Renovation</h3>
+              <p class="text-sm text-slate-300">Compact 950 sq ft flat transformed with Chettinad jaali and natural light.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Karur Flat Renovation</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Flat • Renovation • ₹12L</p>
+        <p class="text-slate-600">Chettinad jaali screens as room dividers maximize light and air flow. Budget-conscious yet elegant minimalistic design.</p>
+      </a>
+
+      <!-- Project 5: Chennai Villa Starting Project -->
+      <a href="/gallery/boutique-hotel" class="gallery-item group block" data-category="ongoing villa starting">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" 
+            alt="Chennai Villa Starting Project"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Ongoing</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Chennai Villa Starting Project</h3>
+              <p class="text-sm text-slate-300">4200 sq ft villa with traditional courtyards and Chettinad jaali work.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Chennai Villa Starting Project</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Villa • Starting Project • ₹90L</p>
+        <p class="text-slate-600">Traditional thinnai, central courtyard, and Chettinad jaali patterns integrated into modern architecture. Maximum natural light and ventilation.</p>
+      </a>
+
+      <!-- Project 6: Bangalore Flat Renovation -->
+      <a href="/gallery/family-residence" class="gallery-item group block" data-category="completed flat renovation">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" 
+            alt="Bangalore Flat Renovation"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Bangalore Flat Renovation</h3>
+              <p class="text-sm text-slate-300">Family-friendly 1100 sq ft flat with Chettinad jaali and functional design.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Bangalore Flat Renovation</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Flat • Renovation • ₹18L</p>
+        <p class="text-slate-600">Chettinad jaali screens, built-in storage, and natural light create a functional family home with elegant minimalism.</p>
+      </a>
+
+      <!-- Project 7: Chennai Compact Flat Renovation -->
+      <a href="/gallery/urban-apartment" class="gallery-item group block" data-category="completed flat renovation">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop" 
+            alt="Chennai Compact Flat Renovation"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Chennai Compact Flat Renovation</h3>
+              <p class="text-sm text-slate-300">650 sq ft flat with Chettinad jaali and space-saving solutions.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Chennai Compact Flat Renovation</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Flat • Renovation • ₹8L</p>
+        <p class="text-slate-600">Chettinad jaali room dividers, smart storage, and natural light maximize this compact space with elegant minimalism.</p>
+      </a>
+
+      <!-- Project 8: Salem Individual Home Starting Project -->
+      <a href="/gallery/restaurant-design" class="gallery-item group block" data-category="completed individual">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" 
+            alt="Salem Individual Home Starting Project"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Salem Individual Home Starting Project</h3>
+              <p class="text-sm text-slate-300">2400 sq ft home with traditional courtyard and Chettinad jaali work.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Salem Individual Home Starting Project</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Individual Home • Starting Project • ₹42L</p>
+        <p class="text-slate-600">Traditional courtyard planning with Chettinad jaali patterns, natural light, and elegant minimalistic design.</p>
+      </a>
+
+      <!-- Project 9: Karur Villa Renovation -->
+      <a href="/gallery/wellness-center" class="gallery-item group block" data-category="ongoing residential">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop" 
+            alt="Karur Villa Renovation"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white w-full">
+              <p class="text-gold-400 text-sm font-medium mb-1">Ongoing</p>
+              <h3 class="text-xl font-serif font-semibold mb-2">Karur Villa Renovation</h3>
+              <p class="text-sm text-slate-300">3200 sq ft villa renovation with Chettinad jaali and natural light.</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Karur Villa Renovation</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Villa • Renovation • ₹55L</p>
+        <p class="text-slate-600">Chettinad jaali screens, Athangudi tiles, and improved natural light create a bright, airy villa with traditional elegance.</p>
+      </a>
+    </div>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section 
+    title="Ready to Start Your Project?"
+    description="Let's discuss how we can transform your space into something extraordinary."
+    className="bg-gradient-to-br from-espresso-900 to-espresso-950 text-white"
+    titleColor="text-white"
+    descriptionColor="text-slate-300"
+  >
+    <div class="text-center">
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a 
+          href="/contact" 
+          class="group inline-flex items-center px-8 py-4 bg-gold-500 text-espresso-900 font-medium rounded-none hover:bg-gold-400 transition-all duration-300 ease-out transform hover:scale-105 font-sans tracking-wide"
+        >
+          <span>Schedule Consultation</span>
+          <svg class="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+        </a>
+        
+        <a 
+          href="/services" 
+          class="group inline-flex items-center px-8 py-4 border border-slate-400 text-slate-300 hover:text-white hover:border-gold-400 transition-all duration-300 ease-out font-sans tracking-wide"
+        >
+          <span>View Services</span>
+          <svg class="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </Section>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active', 'bg-gold-500', 'text-espresso-900');
+          btn.classList.add('bg-white', 'border', 'border-slate-200');
+        });
+
+        // Add active class to clicked button
+        button.classList.add('active', 'bg-gold-500', 'text-espresso-900');
+        button.classList.remove('bg-white', 'border', 'border-slate-200');
+
+        const filter = button.getAttribute('data-filter');
+
+        // Filter gallery items
+        galleryItems.forEach(item => {
+          const categories = item.getAttribute('data-category').split(' ');
+          
+          if (filter === 'all' || categories.includes(filter)) {
+            item.style.display = 'block';
+            item.style.animation = 'fadeIn 0.5s ease-in';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .gallery-item {
+    animation: fadeIn 0.5s ease-in;
+  }
+</style>
+

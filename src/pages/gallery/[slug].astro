@@ -1,0 +1,621 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import Section from '../../components/Section.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+// Project data - in a real app, this would come from a CMS or API
+const projects: Record<string, any> = {
+  'modern-loft': {
+    title: 'Chennai Flat Renovation',
+    category: 'Residential',
+    status: 'Completed',
+    location: 'Chennai, Tamil Nadu',
+    year: '2024',
+    clientRequest: 'Transform a 1200 sq ft flat into a modern, airy living space with Chettinad-inspired jaali work and minimalistic elegance. The client wanted an open-plan design that maximizes natural light and air flow, with distinct zones for living, dining, and working while maintaining privacy.',
+    budget: '₹25L',
+    achievement: 'We successfully transformed the space by incorporating traditional Chettinad jaali patterns in modern contexts, creating visual interest while maintaining air flow. Large windows and strategic openings maximize natural light throughout the day. The design achieved a perfect balance between traditional South Indian aesthetics and contemporary minimalism, with a 35% increase in perceived space through smart layout optimization and light color palette.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop',
+        description: 'Main living area showcasing open-plan design with Chettinad jaali screens allowing natural light and air flow'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&h=800&fit=crop',
+        description: 'Kitchen area with custom cabinetry and Chettinad-inspired jaali work on cabinets'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop',
+        description: 'Bedroom with minimalistic design, natural light, and elegant Chettinad jaali window treatments'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=1200&h=800&fit=crop',
+        description: 'Home office space with built-in storage, natural light, and jaali room divider'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&h=800&fit=crop',
+        description: 'Dining area with statement lighting, flexible seating, and light-filled ambiance'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=1200&h=800&fit=crop',
+        description: 'Bathroom with modern fixtures, natural materials, and elegant minimalistic design'
+      }
+    ]
+  },
+  'luxury-penthouse': {
+    title: 'Bangalore Villa Design',
+    category: 'Residential',
+    status: 'Completed',
+    location: 'Bangalore, Karnataka',
+    year: '2024',
+    clientRequest: 'Design a sophisticated, elegant 3500 sq ft villa that reflects South Indian heritage with modern minimalism. The design needed to accommodate large family gatherings, a home theater, and private spaces. Emphasis on natural light, ventilation, and Chettinad-inspired architectural elements.',
+    budget: '₹85L',
+    achievement: 'We delivered a stunning villa with custom Chettinad jaali work integrated throughout - in windows, room dividers, and decorative panels. The design seamlessly blends traditional South Indian aesthetics with contemporary minimalism. Premium materials including Athangudi tiles, teak wood, and brass accents create an atmosphere of refined elegance. Large courtyards and open spaces maximize natural light and cross-ventilation. The project was completed on schedule.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&h=800&fit=crop',
+        description: 'Grand living room with Chettinad jaali work, natural light, and elegant minimalistic design'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop',
+        description: 'Formal dining room with traditional elements, custom lighting, and seating for large family gatherings'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&h=800&fit=crop',
+        description: 'Master bedroom suite with luxury finishes, Chettinad jaali screens, and private balcony access'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=800&fit=crop',
+        description: 'Home theater with premium sound system, custom seating, and elegant design'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=800&fit=crop',
+        description: 'Private spa area with natural materials, calming palette, and relaxation space'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop',
+        description: 'Kitchen with premium appliances, Athangudi tiles, and Chettinad-inspired design elements'
+      }
+    ]
+  },
+  'corporate-headquarters': {
+    title: 'Salem Individual Home',
+    category: 'Residential',
+    status: 'Ongoing',
+    location: 'Salem, Tamil Nadu',
+    year: '2024-2025',
+    clientRequest: 'Design a 2800 sq ft individual home starting from scratch with emphasis on traditional South Indian architecture adapted for modern living. The client wants Chettinad jaali work, open courtyards, natural light, and minimalistic yet elegant interiors that reflect local heritage.',
+    budget: '₹65L',
+    achievement: 'Phase 1 (structure) completed: We\'ve designed a home with traditional courtyard planning, Chettinad-inspired jaali screens for privacy and ventilation, and large openings for natural light. The design incorporates local materials and traditional construction techniques adapted for modern comfort. The layout maximizes cross-ventilation and creates multiple light-filled spaces throughout the day.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop',
+        description: 'Main living area with open courtyard, natural light, and Chettinad jaali work'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=800&fit=crop',
+        description: 'Traditional thinnai (verandah) with Chettinad jaali screens and natural ventilation'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1200&h=800&fit=crop',
+        description: 'Central courtyard with traditional elements and modern minimalistic design'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&h=800&fit=crop',
+        description: 'Bedroom with Chettinad jaali windows, natural light, and elegant simplicity'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=800&fit=crop',
+        description: 'Open spaces with jaali room dividers creating privacy while maintaining air flow'
+      }
+    ]
+  },
+  'coastal-retreat': {
+    title: 'Karur Flat Renovation',
+    category: 'Residential',
+    status: 'Completed',
+    location: 'Karur, Tamil Nadu',
+    year: '2023',
+    clientRequest: 'Renovate a 950 sq ft flat to create an airy, light-filled space with Chettinad jaali elements and minimalistic design. The client wanted to maximize natural light, improve ventilation, and create a sense of openness despite the compact space. Budget-conscious yet elegant solution.',
+    budget: '₹12L',
+    achievement: 'We transformed the compact flat into a bright, airy space by removing unnecessary walls and incorporating Chettinad jaali screens as room dividers. This maintains privacy while allowing light and air to flow throughout. Light color palette, strategic mirrors, and open shelving create a sense of spaciousness. The design increased natural light by 60% and improved cross-ventilation significantly.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&h=800&fit=crop',
+        description: 'Living room with Chettinad jaali screens, natural light, and airy minimalistic design'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=800&fit=crop',
+        description: 'Open kitchen with compact design, natural materials, and efficient layout'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=800&fit=crop',
+        description: 'Bedroom with jaali window treatments, natural light, and elegant simplicity'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop',
+        description: 'Compact dining area with flexible seating and light-filled ambiance'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&h=800&fit=crop',
+        description: 'Jaali room divider creating visual interest while maintaining openness and air flow'
+      }
+    ]
+  },
+  'boutique-hotel': {
+    title: 'Chennai Villa Starting Project',
+    category: 'Residential',
+    status: 'Ongoing',
+    location: 'Chennai, Tamil Nadu',
+    year: '2024-2025',
+    clientRequest: 'Design a 4200 sq ft villa starting from scratch with traditional South Indian architecture principles. The client wants Chettinad jaali work, open courtyards, natural materials, and a design that celebrates local heritage while providing modern comfort. Emphasis on light, air, and elegant minimalism.',
+    budget: '₹90L',
+    achievement: 'Phase 1 (foundation and structure) completed: We\'ve designed a villa with traditional thinnai (verandah), central courtyard, and Chettinad-inspired jaali patterns integrated into the architecture. The design maximizes natural light through strategic placement of openings and courtyards. Local materials including Athangudi tiles, teak, and traditional lime plaster create an authentic yet modern aesthetic. The layout ensures excellent cross-ventilation throughout.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop',
+        description: 'Villa entrance with traditional thinnai, Chettinad jaali work, and welcoming atmosphere'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&h=800&fit=crop',
+        description: 'Living area with central courtyard, natural light, and elegant minimalistic design'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=800&fit=crop',
+        description: 'Traditional courtyard with Chettinad jaali patterns and natural materials'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&h=800&fit=crop',
+        description: 'Dining area with Athangudi tiles, teak wood, and traditional South Indian elements'
+      }
+    ]
+  },
+  'family-residence': {
+    title: 'Bangalore Flat Renovation',
+    category: 'Residential',
+    status: 'Completed',
+    location: 'Bangalore, Karnataka',
+    year: '2023',
+    clientRequest: 'Renovate a 1100 sq ft flat to accommodate a growing family with two children. The design needs to be durable, kid-friendly, and elegant. Priority on creating functional spaces for study, play, and family time. Incorporate Chettinad jaali elements and maximize natural light.',
+    budget: '₹18L',
+    achievement: 'We completely transformed the flat with family-focused design incorporating Chettinad jaali screens as decorative and functional elements. Built-in storage solutions keep clutter at bay while maintaining the minimalistic aesthetic. The open kitchen-living area became the heart of the home with excellent natural light. The design increased usable space by 30% through smart layout changes and increased natural light by 50% through strategic window placement and jaali screens.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop',
+        description: 'Family room with comfortable seating, built-in storage, and Chettinad jaali elements'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=800&fit=crop',
+        description: 'Kitchen with island seating, family-friendly layout, and natural light'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&h=800&fit=crop',
+        description: 'Kids\' playroom with durable materials, creative storage, and jaali room dividers'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop',
+        description: 'Master bedroom with calming palette, Chettinad jaali windows, and functional design'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=800&fit=crop',
+        description: 'Home office space with natural light, built-in storage, and elegant minimalism'
+      }
+    ]
+  },
+  'urban-apartment': {
+    title: 'Chennai Compact Flat Renovation',
+    category: 'Residential',
+    status: 'Completed',
+    location: 'Chennai, Tamil Nadu',
+    year: '2024',
+    clientRequest: 'Maximize a 650 sq ft flat for a young professional. Need home office, entertaining space, and comfortable living area. Budget-conscious but elegant solution with Chettinad jaali elements and emphasis on natural light and air flow.',
+    budget: '₹8L',
+    achievement: 'We created a multifunctional space using custom built-ins and smart furniture solutions. Chettinad jaali screens serve as room dividers, maintaining privacy while allowing light and air flow. The design increased functional space by 45% through vertical storage and space-saving solutions. Large windows and jaali screens maximize natural light throughout. The project came in 12% under budget.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=800&fit=crop',
+        description: 'Main living space with multifunctional furniture, smart storage, and Chettinad jaali screens'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&h=800&fit=crop',
+        description: 'Kitchenette with compact appliances, efficient layout, and natural light'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop',
+        description: 'Home office nook with built-in desk, storage, and jaali room divider'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=1200&h=800&fit=crop',
+        description: 'Flexible space with jaali screens creating privacy while maintaining openness'
+      }
+    ]
+  },
+  'restaurant-design': {
+    title: 'Salem Individual Home Starting Project',
+    category: 'Residential',
+    status: 'Completed',
+    location: 'Salem, Tamil Nadu',
+    year: '2024',
+    clientRequest: 'Design a 2400 sq ft individual home starting from scratch with traditional South Indian architecture. The client wants Chettinad jaali work, open spaces, natural light, and a minimalistic yet elegant design that reflects local heritage. Budget-conscious approach.',
+    budget: '₹42L',
+    achievement: 'We created a beautiful home with traditional courtyard planning and Chettinad-inspired jaali patterns integrated into windows, balconies, and room dividers. The design maximizes natural light through strategic openings and ensures excellent cross-ventilation. Local materials including terracotta tiles, teak wood, and traditional lime finishes create an authentic aesthetic. The open-plan living areas create a sense of spaciousness while maintaining privacy through jaali screens.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=800&fit=crop',
+        description: 'Main living area with traditional courtyard, Chettinad jaali work, and natural light'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&h=800&fit=crop',
+        description: 'Traditional thinnai with Chettinad jaali screens, teak wood, and elegant design'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=800&fit=crop',
+        description: 'Dining area with Athangudi tiles, traditional elements, and modern comfort'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&h=800&fit=crop',
+        description: 'Bedroom with Chettinad jaali windows, natural materials, and minimalistic elegance'
+      }
+    ]
+  },
+  'wellness-center': {
+    title: 'Karur Villa Renovation',
+    category: 'Residential',
+    status: 'Ongoing',
+    location: 'Karur, Tamil Nadu',
+    year: '2024-2025',
+    clientRequest: 'Renovate a 3200 sq ft villa to incorporate Chettinad jaali work, improve natural light and ventilation, and create a minimalistic yet elegant living space. The design should respect the existing structure while modernizing it for contemporary living.',
+    budget: '₹55L',
+    achievement: 'Phase 1 (interior renovation) completed: We\'ve transformed the villa by incorporating Chettinad jaali screens in strategic locations - as window treatments, room dividers, and decorative elements. The design maximizes natural light through new openings and jaali screens that filter light beautifully. Traditional materials like Athangudi tiles and teak wood are combined with modern finishes. The renovation improved natural light by 70% and cross-ventilation significantly, creating a bright, airy atmosphere throughout.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=800&fit=crop',
+        description: 'Living area with renovated design, Chettinad jaali work, and abundant natural light'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&h=800&fit=crop',
+        description: 'Bedroom with Chettinad jaali window treatments, calming palette, and natural materials'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop',
+        description: 'Open spaces with jaali room dividers creating elegant separation and air flow'
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=800&fit=crop',
+        description: 'Kitchen with modern appliances, traditional materials, and light-filled design'
+      }
+    ]
+  }
+};
+
+// Export getStaticPaths to generate all project pages at build time
+export async function getStaticPaths() {
+  // Define projects here to ensure it's accessible
+  const projectSlugs = [
+    'modern-loft',           // Chennai Flat Renovation
+    'luxury-penthouse',      // Bangalore Villa Design
+    'corporate-headquarters', // Salem Individual Home
+    'coastal-retreat',       // Karur Flat Renovation
+    'boutique-hotel',        // Chennai Villa Starting Project
+    'family-residence',      // Bangalore Flat Renovation
+    'urban-apartment',       // Chennai Compact Flat Renovation
+    'restaurant-design',     // Salem Individual Home Starting Project
+    'wellness-center'        // Karur Villa Renovation
+  ];
+  
+  return projectSlugs.map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = projects[slug || ''];
+
+if (!project) {
+  return Astro.redirect('/gallery');
+}
+---
+
+<BaseLayout 
+  title={`${project.title} | Project Portfolio | Espresso Design House`}
+  description={`${project.title} - ${project.category} project by Espresso Design House. ${project.achievement.substring(0, 150)}...`}
+>
+  <Navigation />
+  
+  <!-- Breadcrumb -->
+  <Breadcrumb items={[
+    { name: "Gallery", href: "/gallery" },
+    { name: project.title }
+  ]} />
+  
+  <!-- Hero Section -->
+  <Hero 
+    title={project.title}
+    subtitle={project.category}
+    description={`${project.location} • ${project.year}`}
+  />
+
+  <!-- Project Overview -->
+  <Section 
+    title="Project Overview"
+    className="bg-slate-50"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+      <div class="lg:col-span-2">
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-2xl font-serif font-semibold text-espresso-900 mb-6">What the Client Wanted</h3>
+          <p class="text-slate-700 leading-relaxed text-lg">{project.clientRequest}</p>
+        </div>
+      </div>
+      <div>
+        <div class="bg-gradient-to-br from-espresso-900 to-espresso-950 rounded-xl p-8 text-white">
+          <h3 class="text-xl font-serif font-semibold mb-6">Project Details</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-gold-400 text-sm font-medium mb-1">Budget</p>
+              <p class="text-xl font-semibold">{project.budget}</p>
+            </div>
+            <div>
+              <p class="text-gold-400 text-sm font-medium mb-1">Status</p>
+              <p class="text-xl font-semibold">{project.status}</p>
+            </div>
+            <div>
+              <p class="text-gold-400 text-sm font-medium mb-1">Category</p>
+              <p class="text-xl font-semibold">{project.category}</p>
+            </div>
+            <div>
+              <p class="text-gold-400 text-sm font-medium mb-1">Location</p>
+              <p class="text-xl font-semibold">{project.location}</p>
+            </div>
+            <div>
+              <p class="text-gold-400 text-sm font-medium mb-1">Year</p>
+              <p class="text-xl font-semibold">{project.year}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl p-8 shadow-sm">
+      <h3 class="text-2xl font-serif font-semibold text-espresso-900 mb-6">How We Achieved It</h3>
+      <p class="text-slate-700 leading-relaxed text-lg">{project.achievement}</p>
+    </div>
+  </Section>
+
+  <!-- Photo Gallery -->
+  <Section 
+    title="Project Gallery"
+    subtitle="View the Transformation"
+    description="Explore detailed photos of this project. Click on any image to view in full size with description."
+    className="bg-slate-50"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {project.images.map((image: any, index: number) => (
+        <div 
+          class="group relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] cursor-pointer"
+          data-image-index={index}
+        >
+          <img 
+            src={image.url} 
+            alt={image.description}
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-4 text-white w-full">
+              <p class="text-sm text-gold-400 mb-1">Click to view</p>
+              <p class="text-sm line-clamp-2">{image.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- Navigation -->
+  <Section 
+    className="bg-slate-50"
+  >
+    <div class="flex flex-col sm:flex-row gap-4 justify-between items-center">
+      <a 
+        href="/gallery" 
+        class="inline-flex items-center px-6 py-3 text-espresso-900 hover:text-gold-500 transition-colors duration-300 font-medium"
+      >
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
+        </svg>
+        Back to Gallery
+      </a>
+      
+      <a 
+        href="/contact" 
+        class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide"
+      >
+        Start Your Project
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </Section>
+
+  <Footer />
+</BaseLayout>
+
+<!-- Image Modal -->
+<div id="image-modal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4" data-images={JSON.stringify(project.images)}>
+  <button 
+    id="close-modal"
+    class="absolute top-4 right-4 text-white hover:text-gold-400 transition-colors z-10"
+    aria-label="Close modal"
+  >
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+  
+  <button 
+    id="prev-image"
+    class="absolute left-4 text-white hover:text-gold-400 transition-colors z-10"
+    aria-label="Previous image"
+  >
+    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+    </svg>
+  </button>
+  
+  <button 
+    id="next-image"
+    class="absolute right-4 text-white hover:text-gold-400 transition-colors z-10"
+    aria-label="Next image"
+  >
+    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+    </svg>
+  </button>
+  
+  <div class="max-w-6xl w-full">
+    <img 
+      id="modal-image"
+      src=""
+      alt=""
+      class="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+    />
+    <p id="modal-description" class="text-white text-center mt-4 text-lg max-w-3xl mx-auto"></p>
+    <p id="modal-counter" class="text-gold-400 text-center mt-2 text-sm"></p>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modalElement = document.getElementById('image-modal');
+    const images = modalElement ? JSON.parse(modalElement.getAttribute('data-images') || '[]') : [];
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalDescription = document.getElementById('modal-description');
+    const modalCounter = document.getElementById('modal-counter');
+    const closeModal = document.getElementById('close-modal');
+    const prevButton = document.getElementById('prev-image');
+    const nextButton = document.getElementById('next-image');
+    
+    let currentImageIndex = 0;
+
+    function openModal(index) {
+      if (!modal || !images || index < 0 || index >= images.length) return;
+      currentImageIndex = index;
+      updateModal();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModalFunc() {
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function updateModal() {
+      if (modalImage && modalDescription && modalCounter && images && images[currentImageIndex]) {
+        const image = images[currentImageIndex];
+        modalImage.src = image.url;
+        modalImage.alt = image.description;
+        modalDescription.textContent = image.description;
+        modalCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+      }
+    }
+
+    function showNext() {
+      if (images) {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        updateModal();
+      }
+    }
+
+    function showPrev() {
+      if (images) {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        updateModal();
+      }
+    }
+
+    // Add click handlers to all gallery images
+    document.querySelectorAll('[data-image-index]').forEach((element) => {
+      element.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const indexAttr = element.getAttribute('data-image-index');
+        if (indexAttr !== null) {
+          const index = parseInt(indexAttr, 10);
+          if (!isNaN(index)) {
+            openModal(index);
+          }
+        }
+      });
+    });
+
+    // Modal controls
+    closeModal?.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeModalFunc();
+    });
+    
+    prevButton?.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      showPrev();
+    });
+    
+    nextButton?.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      showNext();
+    });
+
+    // Close on background click
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModalFunc();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (modal && !modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') {
+          closeModalFunc();
+        } else if (e.key === 'ArrowLeft') {
+          showPrev();
+        } else if (e.key === 'ArrowRight') {
+          showNext();
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  #image-modal {
+    backdrop-filter: blur(8px);
+  }
+  
+  #image-modal img {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>
+

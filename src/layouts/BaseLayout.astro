@@ -12,12 +12,12 @@ export interface Props {
 }
 
 const { 
-  title = "AVITA", 
-  description = "We partner with individuals and families to preserve, grow, and transfer wealth to future generations.",
+  title = "Espresso Design House", 
+  description = "Think Better | Live Better. Transform your spaces with thoughtful interior design that enhances your lifestyle.",
   ogImage = "/og-image.jpg",
   robots = "index, follow",
-  keywords = "wealth management, estate planning, investment advisory, financial planning, family office, tax strategy, philanthropy",
-  author = "AVITA"
+  keywords = "interior design, residential design, commercial design, space planning, custom furniture, home renovation, design consultation",
+  author = "Espresso Design House"
 } = Astro.props;
 
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
@@ -67,64 +67,65 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FinancialService",
-      "name": "AVITA",
-      "description": "We partner with individuals and families to preserve, grow, and transfer wealth to future generations.",
-      "url": "https://yourwealthsite.com",
-      "logo": "https://yourwealthsite.com/favicon.svg",
-      "image": "https://yourwealthsite.com/og-image.jpg",
+      "@type": "LocalBusiness",
+      "@id": "https://espressodesignhouse.com",
+      "name": "Espresso Design House",
+      "description": "Think Better | Live Better. Transform your spaces with thoughtful interior design that enhances your lifestyle.",
+      "url": "https://espressodesignhouse.com",
+      "logo": "https://espressodesignhouse.com/favicon.svg",
+      "image": "https://espressodesignhouse.com/og-image.jpg",
       "telephone": "+1-555-0123",
-      "email": "info@yourwealthsite.com",
+      "email": "info@espressodesignhouse.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Financial District",
+        "streetAddress": "123 Design District",
         "addressLocality": "New York",
         "addressRegion": "NY",
         "postalCode": "10004",
         "addressCountry": "US"
       },
       "serviceType": [
-        "Wealth Management",
-        "Estate Planning", 
-        "Investment Advisory",
-        "Tax Strategy",
-        "Philanthropy",
-        "Family Office Services"
+        "Interior Design",
+        "Residential Design", 
+        "Commercial Design",
+        "Space Planning",
+        "Custom Furniture",
+        "Design Consultation"
       ],
       "areaServed": "United States",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Wealth Management Services",
+        "name": "Interior Design Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Wealth Management",
-              "description": "Comprehensive portfolio management and investment advisory services"
+              "name": "Residential Design",
+              "description": "Full-home design and room makeovers tailored to your lifestyle"
             }
           },
           {
             "@type": "Offer", 
             "itemOffered": {
               "@type": "Service",
-              "name": "Estate Planning",
-              "description": "Strategic estate planning and wealth transfer solutions"
+              "name": "Commercial Design",
+              "description": "Office spaces, retail, and hospitality design solutions"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service", 
-              "name": "Investment Advisory",
-              "description": "Professional investment advice and portfolio management"
+              "name": "Space Planning",
+              "description": "Layout optimization and flow analysis for better functionality"
             }
           }
         ]
       },
       "sameAs": [
-        "https://linkedin.com/company/refined-wealth-management",
-        "https://twitter.com/refinedwealth"
+        "https://linkedin.com/company/espresso-design-house",
+        "https://instagram.com/espressodesignhouse"
       ]
     }
     </script>
@@ -228,14 +229,14 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
   
   /* Focus styles for accessibility */
   *:focus {
-    outline: 2px solid #d4af37;
+    outline: 2px solid #D4A574;
     outline-offset: 2px;
   }
   
   /* Selection styles */
   ::selection {
-    background-color: #d4af37;
-    color: #1a2332;
+    background-color: #D4A574;
+    color: #2C2416;
   }
   
   /* Custom scrollbar */
@@ -244,15 +245,15 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
   }
   
   ::-webkit-scrollbar-track {
-    background: #f1f3f4;
+    background: #FAF7F2;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #d4af37;
+    background: #D4A574;
     border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #b8941f;
+    background: #B8894F;
   }
 </style>

@@ -8,8 +8,8 @@ import Card from '../components/Card.astro';
 ---
 
 <BaseLayout 
-  title="AVITA | Wealth Management Mastered"
-  description="Comprehensive wealth management services, experienced team, and sophisticated financial solutions all in one place."
+  title="Espresso Design House | Think Better | Live Better"
+  description="Transform your spaces with thoughtful interior design. Residential and commercial design services that enhance your lifestyle."
 >
   <Navigation />
   
@@ -25,33 +25,33 @@ import Card from '../components/Card.astro';
     </svg>
   </div>
 
-  <!-- Mission Section -->
+  <!-- Design Philosophy Section -->
   <Section 
     id="mission"
-    title="Our Mission"
-    description="To provide unparalleled wealth management services that honor the trust our clients place in us, ensuring their financial legacy endures for generations to come."
+    title="Our Design Philosophy"
+    description="We believe great design enhances how you live. Every space we create is thoughtfully designed to reflect your unique vision while improving functionality and beauty."
     className="bg-slate-50"
   >
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <Card 
-        title="Preservation"
-        description="Protecting and maintaining wealth across generations with sophisticated risk management and conservative growth strategies."
+        title="Functionality"
+        description="Creating spaces that work beautifully for your lifestyle. Every design decision prioritizes how you actually live and use your space."
+        icon="home"
+        href="/services#residential-design"
+        showLearnMore={false}
+      />
+      <Card 
+        title="Beauty"
+        description="Aesthetic excellence in every detail. We combine timeless design principles with contemporary sensibilities to create spaces that inspire."
+        icon="star"
+        href="/services#commercial-design"
+        showLearnMore={false}
+      />
+      <Card 
+        title="Sustainability"
+        description="Timeless designs that endure. We focus on quality materials and thoughtful choices that stand the test of time, both aesthetically and environmentally."
         icon="shield"
-        href="/services#wealth-management"
-        showLearnMore={false}
-      />
-      <Card 
-        title="Growth"
-        description="Strategic investment approaches designed to grow wealth while maintaining the highest standards of risk management."
-        icon="trending"
-        href="/services#investment-advisory"
-        showLearnMore={false}
-      />
-      <Card 
-        title="Transfer"
-        description="Comprehensive estate planning and wealth transfer solutions that ensure your legacy benefits future generations."
-        icon="building"
-        href="/services#estate-planning"
+        href="/philosophy"
         showLearnMore={false}
       />
     </div>
@@ -72,29 +72,29 @@ import Card from '../components/Card.astro';
   >
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <Card 
-        title="Trust"
-        description="Building lasting relationships through transparency, integrity, and unwavering commitment to our clients' best interests."
+        title="Collaboration"
+        description="Working closely with clients to understand their vision, lifestyle, and needs. Your input shapes every design decision."
         icon="handshake"
         href="/philosophy"
         showLearnMore={false}
       />
       <Card 
-        title="Precision"
-        description="Meticulous attention to detail in every aspect of wealth management, from strategy development to execution."
+        title="Craftsmanship"
+        description="Attention to detail in every element. From material selection to final styling, we ensure exceptional quality throughout."
         icon="target"
         href="/philosophy"
         showLearnMore={false}
       />
       <Card 
-        title="Discretion"
-        description="Maintaining the highest levels of confidentiality and privacy in all client relationships and transactions."
-        icon="scale"
+        title="Innovation"
+        description="Fresh, creative solutions that push boundaries while respecting timeless design principles. We bring new ideas to every project."
+        icon="star"
         href="/philosophy"
         showLearnMore={false}
       />
       <Card 
-        title="Excellence"
-        description="Pursuing the best standards of service quality and client satisfaction in everything we do."
+        title="Quality"
+        description="Premium materials and execution standards. We partner with trusted artisans and vendors to deliver exceptional results."
         icon="star"
         href="/philosophy"
         showLearnMore={false}
@@ -110,92 +110,92 @@ import Card from '../components/Card.astro';
   </div>
 
   <!-- Services Section -->
-  <section id="services" class="pt-32 pb-20 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
+  <section id="services" class="pt-32 pb-20 bg-gradient-to-br from-espresso-900 via-espresso-950 to-espresso-900">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
-        Comprehensive Services
+        Our Services
       </p>
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
-        <span class="block title-words">Bespoke Wealth Management Solutions</span>
+        <span class="block title-words">Bespoke Interior Design Solutions</span>
       </h1>
       <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans opacity-0 animate-fade-up-delay-2">
-        Tailored strategies designed to preserve, grow, and transfer wealth across generations with unwavering precision and discretion.
+        Tailored design services that transform spaces into beautiful, functional environments reflecting your unique style and enhancing your daily life.
       </p>
     </div>
   </section>
 
   <!-- Services Content -->
   <Section 
-    title="Core Services Overview"
+    title="Design Services Overview"
     subtitle="Our Expertise"
-    description="Comprehensive wealth management solutions tailored to your unique needs and long-term objectives."
+    description="Comprehensive interior design services tailored to your unique style, space, and lifestyle needs."
     className="bg-slate-50"
   >
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Residential</h3>
+      </div>
+      
+      <div class="text-center group">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3a3 3 0 013-3h3a3 3 0 013 3v3"/>
           </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Family Office</h3>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Commercial</h3>
       </div>
       
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m0 0a9.803 9.803 0 0113.5 0"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h11.25c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Wealth Management</h3>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Space Planning</h3>
       </div>
       
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3a3 3 0 013-3h3a3 3 0 013 3v3"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/>
           </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Estate Planning</h3>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Custom Furniture</h3>
       </div>
       
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 3.2 3.2 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
           </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Philanthropy</h3>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Color Consultation</h3>
       </div>
       
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Tax Strategy</h3>
-      </div>
-      
-      <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Investment Advisory</h3>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Project Management</h3>
       </div>
     </div>
     
     <div class="text-center mt-12">
       <a 
         href="/services" 
-        class="group relative inline-flex items-center w-full sm:w-auto justify-center px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 active:scale-95 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden touch-manipulation"
+        class="group relative inline-flex items-center w-full sm:w-auto justify-center px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 active:scale-95 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden touch-manipulation"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent group-hover:animate-pulse"></div>
         <span class="relative z-10 flex items-center">
-          Learn More About Our Services
+          Explore Our Design Services
           <svg class="ml-3 w-5 h-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
@@ -213,16 +213,16 @@ import Card from '../components/Card.astro';
   </div>
 
   <!-- Team Section -->
-  <section id="team" class="pt-32 pb-20 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
+  <section id="team" class="pt-32 pb-20 bg-gradient-to-br from-espresso-900 via-espresso-950 to-espresso-900">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
         Our Team
       </p>
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
-        <span class="block title-words">Experienced Professionals</span>
+        <span class="block title-words">Creative Professionals</span>
       </h1>
       <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans opacity-0 animate-fade-up-delay-2">
-        Our team combines decades of experience with deep expertise in wealth management, estate planning, and sophisticated financial strategies.
+        Our team combines creative vision with technical expertise, bringing decades of design experience to transform your spaces.
       </p>
     </div>
   </section>
@@ -230,60 +230,60 @@ import Card from '../components/Card.astro';
   <!-- Team Content -->
   <Section 
     title="Our Team"
-    subtitle="Experienced Professionals"
-    description="Our team combines decades of experience with deep expertise in wealth management, estate planning, and sophisticated financial strategies."
+    subtitle="Creative Professionals"
+    description="Our team combines creative vision with technical expertise, bringing decades of design experience to transform your spaces."
   >
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
             </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Mary Chinniah</h3>
-        <p class="text-sm text-gold-500 font-medium">MBA BSc, Director of Operations</p>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Lead Designer</h3>
+        <p class="text-sm text-gold-500 font-medium">Creative Director</p>
       </div>
 
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
             </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Jason Kinnear</h3>
-        <p class="text-sm text-gold-500 font-medium">CPA, CA, CBV, Family Office Services Manager</p>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Project Manager</h3>
+        <p class="text-sm text-gold-500 font-medium">Operations & Coordination</p>
       </div>
 
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
             </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Emerita Mercado</h3>
-        <p class="text-sm text-gold-500 font-medium">CFP, TEP, Financial Planner</p>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Design Consultant</h3>
+        <p class="text-sm text-gold-500 font-medium">Space Planning & Styling</p>
       </div>
 
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
             </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Demelza Thomas</h3>
-        <p class="text-sm text-gold-500 font-medium">Client Solutions</p>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Client Relations</h3>
+        <p class="text-sm text-gold-500 font-medium">Client Experience & Communication</p>
       </div>
     </div>
     
     <div class="text-center mt-12">
       <a 
         href="/team" 
-        class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
+        class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent group-hover:animate-pulse"></div>
         <span class="relative z-10 flex items-center">
-          Meet Our Full Team
+          Meet Our Design Team
           <svg class="ml-3 w-5 h-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
@@ -301,65 +301,240 @@ import Card from '../components/Card.astro';
   </div>
 
   <!-- Philosophy Section -->
-  <section id="philosophy" class="pt-32 pb-20 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
+  <section id="philosophy" class="pt-32 pb-20 bg-gradient-to-br from-espresso-900 via-espresso-950 to-espresso-900">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
         Our Philosophy
       </p>
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
-        <span class="block title-words">Investment Excellence</span>
+        <span class="block title-words">Design Excellence</span>
       </h1>
       <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans opacity-0 animate-fade-up-delay-2">
-        Our investment philosophy is built on the foundation of preserving capital, generating consistent returns, and creating lasting wealth for future generations.
+        Our design philosophy balances form and function, creating spaces that are both beautiful and practical, timeless yet contemporary.
       </p>
     </div>
   </section>
 
   <!-- Philosophy Content -->
   <Section 
-    title="Core Investment Philosophy Overview"
+    title="Core Design Philosophy Overview"
     subtitle="Our Foundation"
-    description="The fundamental principles that guide every investment decision we make on behalf of our clients."
+    description="The fundamental principles that guide every design decision we make for our clients."
     className="bg-slate-50"
   >
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Form + Function</h3>
+      </div>
+      
+      <div class="text-center group">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Capital Preservation</h3>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Sustainable Design</h3>
       </div>
       
       <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-espresso-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 3.2 3.2 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Risk-Adjusted Returns</h3>
-      </div>
-      
-      <div class="text-center group">
-        <div class="w-16 h-16 bg-gradient-to-br from-navy-900 to-gold-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-semibold text-navy-900 group-hover:text-gold-500 transition-colors duration-300">Long-Term Perspective</h3>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 group-hover:text-gold-500 transition-colors duration-300">Client Collaboration</h3>
       </div>
     </div>
     
     <div class="text-center mt-12">
       <a 
         href="/philosophy" 
-        class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
+        class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent group-hover:animate-pulse"></div>
         <span class="relative z-10 flex items-center">
-          Explore Our Investment Philosophy
+          Explore Our Design Philosophy
+          <svg class="ml-3 w-5 h-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </span>
+        <div class="absolute inset-0 rounded-xl border border-gold-300/50 group-hover:border-gold-200 transition-colors duration-300"></div>
+      </a>
+    </div>
+  </Section>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+    </svg>
+  </div>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="pt-32 pb-20 bg-gradient-to-br from-espresso-900 via-espresso-950 to-espresso-900">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
+        Our Work
+      </p>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
+        <span class="block title-words">Project Gallery</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans opacity-0 animate-fade-up-delay-2">
+        Explore our portfolio of completed projects and see how we transform spaces into beautiful, functional environments.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Content -->
+  <Section 
+    title="Featured Projects"
+    subtitle="Completed & Ongoing"
+    description="A selection of our recent work showcasing diverse design styles and spaces we've transformed."
+    className="bg-slate-50"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <!-- Project 1 -->
+      <a href="/gallery/modern-loft" class="group block">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop" 
+            alt="Chennai Flat Renovation"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold">Chennai Flat Renovation</h3>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Chennai Flat Renovation</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Flat • Renovation • ₹25L</p>
+        <p class="text-slate-600 text-sm">Chettinad jaali work and minimalistic elegance in a 1200 sq ft flat with natural light and air flow.</p>
+      </a>
+
+      <!-- Project 2 -->
+      <a href="/gallery/luxury-penthouse" class="group block">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop" 
+            alt="Bangalore Villa Design"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold">Bangalore Villa Design</h3>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Bangalore Villa Design</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Villa • Starting Project • ₹85L</p>
+        <p class="text-slate-600 text-sm">Traditional Chettinad jaali work meets modern minimalism in a 3500 sq ft villa.</p>
+      </a>
+
+      <!-- Project 3 -->
+      <a href="/gallery/corporate-headquarters" class="group block">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" 
+            alt="Salem Individual Home"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <p class="text-gold-400 text-sm font-medium mb-1">Ongoing</p>
+              <h3 class="text-xl font-serif font-semibold">Salem Individual Home</h3>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Salem Individual Home</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Individual Home • Starting Project • ₹65L</p>
+        <p class="text-slate-600 text-sm">Traditional South Indian architecture with Chettinad jaali and courtyards for natural light.</p>
+      </a>
+
+      <!-- Project 4 -->
+      <a href="/gallery/coastal-retreat" class="group block">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop" 
+            alt="Karur Flat Renovation"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold">Karur Flat Renovation</h3>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Karur Flat Renovation</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Flat • Renovation • ₹12L</p>
+        <p class="text-slate-600 text-sm">Compact 950 sq ft flat transformed with Chettinad jaali and natural light.</p>
+      </a>
+
+      <!-- Project 5 -->
+      <a href="/gallery/boutique-hotel" class="group block">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" 
+            alt="Chennai Villa Starting Project"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <p class="text-gold-400 text-sm font-medium mb-1">Ongoing</p>
+              <h3 class="text-xl font-serif font-semibold">Chennai Villa Starting Project</h3>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Chennai Villa Starting Project</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Villa • Starting Project • ₹90L</p>
+        <p class="text-slate-600 text-sm">4200 sq ft villa with traditional courtyards and Chettinad jaali work.</p>
+      </a>
+
+      <!-- Project 6 -->
+      <a href="/gallery/family-residence" class="group block">
+        <div class="relative overflow-hidden rounded-xl bg-slate-200 aspect-[4/3] mb-4">
+          <img 
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" 
+            alt="Bangalore Flat Renovation"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+            <div class="p-6 text-white">
+              <p class="text-gold-400 text-sm font-medium mb-1">Completed</p>
+              <h3 class="text-xl font-serif font-semibold">Bangalore Flat Renovation</h3>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-lg font-serif font-semibold text-espresso-900 mb-2 group-hover:text-gold-500 transition-colors">Bangalore Flat Renovation</h3>
+        <p class="text-sm text-gold-500 font-medium mb-2">Flat • Renovation • ₹18L</p>
+        <p class="text-slate-600 text-sm">Family-friendly 1100 sq ft flat with Chettinad jaali and functional design.</p>
+      </a>
+    </div>
+    
+    <div class="text-center">
+      <a 
+        href="/gallery" 
+        class="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-900 font-serif font-semibold rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 ease-out transform hover:scale-105 hover:-translate-y-1 tracking-wide overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent group-hover:animate-pulse"></div>
+        <span class="relative z-10 flex items-center">
+          View Full Gallery
           <svg class="ml-3 w-5 h-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
@@ -377,16 +552,16 @@ import Card from '../components/Card.astro';
   </div>
 
   <!-- Contact Section -->
-  <section id="contact" class="pt-32 pb-20 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
+  <section id="contact" class="pt-32 pb-20 bg-gradient-to-br from-espresso-900 via-espresso-950 to-espresso-900">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-gold-400 text-sm uppercase tracking-[0.2em] font-medium mb-6 font-sans opacity-0 animate-fade-up">
         Contact Us
       </p>
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight opacity-0 animate-fade-up-delay">
-        <span class="block title-words">Ready to Begin Your Journey?</span>
+        <span class="block title-words">Ready to Transform Your Space?</span>
       </h1>
       <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans opacity-0 animate-fade-up-delay-2">
-        Schedule a consultation to discuss how we can help preserve, grow, and transfer your wealth.
+        Schedule a consultation to discuss how we can transform your space into a beautiful, functional environment that enhances your lifestyle.
       </p>
     </div>
   </section>
@@ -394,20 +569,20 @@ import Card from '../components/Card.astro';
   <!-- Contact Content -->
   <Section 
     title="Get In Touch"
-    subtitle="Start Your Journey"
-    description="We're here to help you achieve your wealth management goals with sophisticated solutions tailored to your unique needs."
+    subtitle="Start Your Design Journey"
+    description="We're here to help you achieve your design vision with thoughtful solutions tailored to your unique style and needs."
     className="bg-slate-50"
   >
     <div class="text-center">
       <a 
         href="/contact" 
-        class="group relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-900 font-serif font-bold rounded-2xl hover:shadow-2xl hover:shadow-gold-500/40 transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-2 tracking-wide overflow-hidden"
+        class="group relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-900 font-serif font-bold rounded-2xl hover:shadow-2xl hover:shadow-gold-500/40 transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-2 tracking-wide overflow-hidden"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/80 to-transparent group-hover:animate-pulse"></div>
         <div class="absolute -inset-0.5 bg-gradient-to-r from-gold-400 to-gold-600 rounded-2xl opacity-30 group-hover:opacity-60 blur-sm transition-opacity duration-300"></div>
         <span class="relative z-10 flex items-center text-lg">
-          Get In Touch
+          Schedule Consultation
           <svg class="ml-3 w-6 h-6 transition-all duration-300 group-hover:translate-x-3 group-hover:scale-125" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
           </svg>
@@ -463,7 +638,7 @@ import Card from '../components/Card.astro';
 <script>
   // Step-by-step hash navigation
   document.addEventListener('DOMContentLoaded', () => {
-    const sections: string[] = ['hero', 'mission', 'values', 'services', 'team', 'philosophy', 'contact'];
+    const sections: string[] = ['hero', 'mission', 'values', 'services', 'team', 'philosophy', 'gallery', 'contact'];
     let currentSectionIndex = 0;
     
     // Find current section index on page load

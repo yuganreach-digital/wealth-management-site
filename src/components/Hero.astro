@@ -7,46 +7,76 @@ interface Props {
 }
 
 const { 
-  title = "AVITA", 
-  subtitle = "Family Office Services",
-  description = "We partner with individuals and families to preserve, grow, and transfer wealth to future generations.",
+  title = "Espresso Design House", 
+  subtitle = "Think Better | Live Better",
+  description = "Transform your spaces with thoughtful interior design that enhances your lifestyle and reflects your unique vision.",
   isHomepage = false
 } = Astro.props;
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
-  <!-- Subtle Background Animation -->
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-400 rounded-full mix-blend-multiply filter blur-xl animate-parallax"></div>
-    <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-gold-500 rounded-full mix-blend-multiply filter blur-xl animate-parallax" style="animation-delay: -10s;"></div>
+<section class="relative min-h-screen flex items-center justify-center overflow-visible bg-gradient-to-br from-espresso-50 via-white to-espresso-100 pb-20">
+  <!-- Animated Gradient Mesh Background -->
+  <div class="absolute inset-0 overflow-hidden">
+    <!-- Large animated orbs with warm colors -->
+    <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-gradient-to-br from-gold-400/40 to-gold-500/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+    <div class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-gold-500/30 to-espresso-100/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-40 left-1/3 w-[550px] h-[550px] bg-gradient-to-br from-espresso-100/50 to-gold-400/35 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    
+    <!-- Floating particles with gold color -->
+    <div class="absolute inset-0" id="particles-container"></div>
+    
+    <!-- Subtle grid overlay -->
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(212,165,116,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(212,165,116,0.06)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"></div>
+    
+    <!-- Radial gradient overlay for depth -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(250,247,242,0.3)_100%)]"></div>
   </div>
 
-          <!-- Main Content -->
-          <div class="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
-            <!-- Main Title - Static, no animation for company name -->
-            <div>
-              <h1 class={isHomepage 
-                ? "text-8xl md:text-[10rem] lg:text-[14rem] font-serif text-white mb-4 leading-tight tracking-tight font-bold" 
-                : "text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-3 leading-tight"}>
-                {title}
-              </h1>
-              {subtitle && (
-                <h2 class={isHomepage 
-                  ? "text-3xl md:text-5xl lg:text-6xl font-serif text-gold-400 mb-8 leading-tight" 
-                  : "text-2xl md:text-3xl lg:text-4xl font-serif text-gold-400 mb-8 leading-tight"} 
-                  style="font-variant-ligatures: none;">
-                  {subtitle}
-                </h2>
-              )}
-            </div>
+  <!-- Light overlay for better text contrast -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-espresso-50/30"></div>
 
-    <!-- Description with delayed entrance -->
-    <div class="opacity-0 animate-fade-up-delay-2">
-      <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans">
-        {description}
-      </p>
+  <!-- Main Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 text-center pt-20">
+    <!-- Decorative top element -->
+    <div class="flex items-center justify-center mb-8 opacity-0 animate-fade-up">
+      <div class="h-px w-12 bg-gradient-to-r from-transparent to-gold-500"></div>
+      <div class="mx-4 w-2 h-2 bg-gold-500 rounded-full animate-pulse shadow-lg shadow-gold-400/50"></div>
+      <div class="h-px w-12 bg-gradient-to-l from-transparent to-gold-500"></div>
     </div>
 
+    <!-- Main Title with staggered reveal -->
+    <div class="relative">
+      <h1 class={isHomepage 
+        ? "text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-serif mb-6 leading-tight tracking-tight font-bold opacity-0 animate-fade-up-delay hero-title whitespace-nowrap" 
+        : "text-4xl md:text-5xl lg:text-6xl font-serif mb-4 leading-tight opacity-0 animate-fade-up-delay hero-title whitespace-nowrap"}>
+        <span class="text-[#7D5628] initial-letter">E</span><span class="text-espresso-900 word-expand word-1">spresso</span>{' '}
+        <span class="text-[#7D5628] initial-letter">D</span><span class="text-espresso-900 word-expand word-2">esign</span>{' '}
+        <span class="text-[#7D5628] initial-letter">H</span><span class="text-espresso-900 word-expand word-3">ouse</span>
+      </h1>
+      
+      {subtitle && (
+        <div class="relative inline-block">
+          <h2 class={isHomepage 
+            ? "text-xl md:text-2xl lg:text-3xl font-serif text-espresso-800 mb-10 leading-tight opacity-0 animate-fade-up-delay-2" 
+            : "text-lg md:text-xl lg:text-2xl font-serif text-espresso-800 mb-8 leading-tight opacity-0 animate-fade-up-delay-2"} 
+            style="font-variant-ligatures: none;">
+            {subtitle}
+          </h2>
+          <!-- Animated underline -->
+          <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-0.5 w-0 bg-gradient-to-r from-transparent via-gold-500 to-transparent animate-expand-width shadow-sm"></div>
+        </div>
+      )}
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="mt-16 mb-16 opacity-0 animate-fade-up-delay-3">
+      <div class="inline-flex flex-col items-center gap-2 cursor-pointer group" id="hero-scroll-indicator">
+        <span class="text-gold-600/70 text-sm uppercase tracking-widest font-sans group-hover:text-gold-600 transition-colors font-medium">Explore</span>
+        <div class="w-6 h-10 border-2 border-gold-500/50 rounded-full flex items-start justify-center p-2 group-hover:border-gold-600 transition-colors shadow-sm">
+          <div class="w-1.5 h-3 bg-gold-600 rounded-full animate-scroll-down"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -74,20 +104,232 @@ const {
   }
 
   ::-webkit-scrollbar-track {
-    background: #1a2332;
+    background: #2C2416;
   }
-
+  
   ::-webkit-scrollbar-thumb {
-    background: #d4af37;
+    background: #D4A574;
     border-radius: 4px;
   }
-
+  
   ::-webkit-scrollbar-thumb:hover {
-    background: #b8941f;
+    background: #B8894F;
   }
-</style>
+
+  /* Blob animation */
+  @keyframes blob {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(20px, -50px) scale(1.1);
+    }
+    50% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    75% {
+      transform: translate(50px, 50px) scale(1.05);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 20s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  /* Scroll down animation */
+  @keyframes scroll-down {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+
+  .animate-scroll-down {
+    animation: scroll-down 2s infinite;
+  }
+
+  /* Width expansion animation */
+  @keyframes expand-width {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 60%;
+    }
+  }
+
+  .animate-expand-width {
+    animation: expand-width 1s ease-out 0.8s forwards;
+  }
+
+  /* Particle styles */
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, rgba(212, 165, 116, 0.6), rgba(232, 201, 155, 0.3), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float-particle linear infinite;
+    box-shadow: 0 0 8px rgba(212, 165, 116, 0.4);
+  }
+
+  @keyframes float-particle {
+    0% {
+      transform: translateY(100vh) translateX(0) scale(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) translateX(var(--drift)) scale(1);
+      opacity: 0;
+      }
+    }
+ 
+   /* Smooth reveal animation - show EDH first, then smoothly reveal full name */
+   .word-expand {
+     display: inline-block;
+     max-width: 0;
+     opacity: 0;
+     overflow: visible;
+     vertical-align: baseline;
+     white-space: nowrap;
+   }
+ 
+   .word-1 {
+     animation: smooth-reveal-1 1.2s cubic-bezier(0.4, 0, 0.2, 1) 1.5s forwards;
+   }
+ 
+   .word-2 {
+     animation: smooth-reveal-2 1.2s cubic-bezier(0.4, 0, 0.2, 1) 2.2s forwards;
+   }
+ 
+   .word-3 {
+     animation: smooth-reveal-3 1.2s cubic-bezier(0.4, 0, 0.2, 1) 2.9s forwards;
+   }
+ 
+   @keyframes smooth-reveal-1 {
+     0% {
+       max-width: 0;
+       opacity: 0;
+     }
+     10% {
+       opacity: 1;
+     }
+     100% {
+       max-width: 15ch;
+       opacity: 1;
+     }
+   }
+ 
+   @keyframes smooth-reveal-2 {
+     0% {
+       max-width: 0;
+       opacity: 0;
+     }
+     10% {
+       opacity: 1;
+     }
+     100% {
+       max-width: 10ch;
+       opacity: 1;
+     }
+   }
+ 
+   @keyframes smooth-reveal-3 {
+     0% {
+       max-width: 0;
+       opacity: 0;
+     }
+     10% {
+       opacity: 1;
+     }
+     100% {
+       max-width: 8ch;
+       opacity: 1;
+     }
+   }
+ 
+   /* Initial letters visible from start */
+   .initial-letter {
+     display: inline;
+     opacity: 1;
+     vertical-align: baseline;
+   }
+  </style>
 
 <script>
+  // Create floating particles
+  function createParticles() {
+    const container = document.getElementById('particles-container');
+    if (!container) return;
+
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      
+      // Random positioning
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+      particle.style.animationDelay = Math.random() * 5 + 's';
+      particle.style.setProperty('--drift', (Math.random() * 100 - 50) + 'px');
+      
+      // Random size variation
+      const size = Math.random() * 3 + 2;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      
+      container.appendChild(particle);
+    }
+  }
+
+  // Mouse parallax effect
+  function initMouseParallax() {
+    const hero = document.querySelector('section');
+    if (!hero) return;
+
+    hero.addEventListener('mousemove', (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
+      
+      const xPercent = (clientX / innerWidth - 0.5) * 2;
+      const yPercent = (clientY / innerHeight - 0.5) * 2;
+      
+      // Move background elements based on mouse position
+      const orbs = hero.querySelectorAll('.animate-blob');
+      orbs.forEach((orb, index) => {
+        const speed = (index + 1) * 10;
+        (orb as HTMLElement).style.transform = `translate(${xPercent * speed}px, ${yPercent * speed}px)`;
+      });
+    });
+  }
+
   // Intersection Observer for scroll-triggered animations
   const observerOptions = {
     threshold: 0.1,
@@ -101,8 +343,6 @@ const {
       }
     });
   }, observerOptions);
-
-  // Company name is now static, no need to split words
 
   // Enhanced smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -120,6 +360,17 @@ const {
       }
     });
   });
+
+  // Hero scroll indicator click handler
+  const heroScrollIndicator = document.getElementById('hero-scroll-indicator');
+  if (heroScrollIndicator) {
+    heroScrollIndicator.addEventListener('click', () => {
+      const nextSection = document.querySelector('#mission');
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 
   // Parallax effect for background elements
   window.addEventListener('scroll', () => {
@@ -159,7 +410,17 @@ const {
     }
   }
   
-  // Setup go to top button
-  setupGoToTop();
-  setTimeout(setupGoToTop, 100);
+  // Initialize everything
+  document.addEventListener('DOMContentLoaded', () => {
+    createParticles();
+    initMouseParallax();
+    setupGoToTop();
+  });
+  
+  // Backup initialization
+  setTimeout(() => {
+    createParticles();
+    initMouseParallax();
+    setupGoToTop();
+  }, 100);
 </script>

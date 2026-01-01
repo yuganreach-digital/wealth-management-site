@@ -1,10 +1,10 @@
-# Wealth Management Site
+# Espresso Design House
 
-An elegant, understated luxury website built with Astro and Tailwind CSS for sophisticated wealth management services.
+An elegant, sophisticated website built with Astro and Tailwind CSS for interior design services.
 
 ## Design Philosophy
 
-**"Quiet Confidence"** - Every element whispers expertise rather than shouting for attention.
+**"Think Better | Live Better"** - Transform your spaces with thoughtful design that enhances your lifestyle.
 
 ### Key Features
 
@@ -90,8 +90,8 @@ npm run build
 
 The site uses a sophisticated color palette defined in `tailwind.config.mjs`:
 
-- **Navy**: Deep, trustworthy primary color
-- **Gold**: Luxury accent color
+- **Espresso**: Rich, warm dark brown primary color
+- **Gold**: Warm gold accent color (#D4A574)
 - **Slate**: Professional neutral tones
 
 ### Typography
@@ -119,4 +119,4 @@ All animations respect user preferences for reduced motion and are optimized for
 
 ## License
 
-© 2024 Wealth Management Site. All rights reserved.
+© 2025 Espresso Design House. All rights reserved.
