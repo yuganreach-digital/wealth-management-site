@@ -12,8 +12,6 @@ const {
   description = "We partner with individuals and families to preserve, grow, and transfer wealth to future generations.",
   isHomepage = false
 } = Astro.props;
-
-const descriptionLines = description ? description.split('\n') : [];
 ---
 
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-900 via-slate-900 to-navy-900">
@@ -45,12 +43,7 @@ const descriptionLines = description ? description.split('\n') : [];
     <!-- Description with delayed entrance -->
     <div class="opacity-0 animate-fade-up-delay-2">
       <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed font-light mb-12 font-sans">
-        {descriptionLines.map((line, index) => (
-          <>
-            {line}
-            {index < descriptionLines.length - 1 && <br />}
-          </>
-        ))}
+        {description}
       </p>
     </div>
 
