@@ -9,7 +9,7 @@ interface Props {
 const { 
   title = "AVITA", 
   subtitle = "Family Office Services",
-  description = "We partner with individuals and families to preserve, grow, and transfer wealth to future generations.",
+  description = " ",
   isHomepage = false
 } = Astro.props;
 ---
@@ -37,6 +37,11 @@ const {
                   style="font-variant-ligatures: none;">
                   {subtitle}
                 </h2>
+              )}
+              {isHomepage && (
+                <p class="text-base md:text-lg uppercase tracking-[0.3em] text-slate-200 font-sans mb-6">
+                  Purpose. Stewardship. Legacy.
+                </p>
               )}
             </div>
 
