@@ -73,94 +73,93 @@ import Card from '../components/Card.astro';
   >
       <div class="flex justify-center">
         <div class="donut-chart-wrapper">
-          <svg class="donut-chart" viewBox="0 0 400 400" role="img" aria-labelledby="chart-title">
-            <title id="chart-title">360 degree view of wealth planning</title>
+          <svg class="donut-chart" viewBox="80 80 240 240" role="img" aria-labelledby="chart-title">
+            <title id="chart-title">A 360° Degree Bespoke Plan</title>
             <defs>
               <filter id="shadow">
-                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
               </filter>
             </defs>
             
-            <!-- Complete donut ring with 12 equal segments -->
+            <!-- Complete donut ring with 12 equal segments (30° each) -->
             <g transform="translate(200,200)">
-              <!-- Segment 1: Estate Planning (0-30°) -->
+              <!-- Segment 1: Legacy Preservation (Top, 0-30°) - Light beige -->
               <path d="M 0,-120 A 120,120 0 0,1 60,-103.92 L 30,-51.96 A 60,60 0 0,0 0,-60 Z" 
-                    fill="#f4e4b8" filter="url(#shadow)" class="segment"/>
-              <text x="30" y="-145" text-anchor="middle" font-size="9" fill="#8b7355">Estate</text>
-              <text x="30" y="-135" text-anchor="middle" font-size="9" fill="#8b7355">Planning</text>
+                    fill="#f5e6d3" filter="url(#shadow)" class="segment"/>
+              <text x="23" y="-90" text-anchor="middle" font-size="8" fill="#7d6e5c" font-weight="500">Legacy</text>
+              <text x="23" y="-81" text-anchor="middle" font-size="8" fill="#7d6e5c" font-weight="500">Preserved</text>
               
-              <!-- Segment 2: Financial Coaching (30-60°) -->
+              <!-- Segment 2: Succession Planning (30-60°) - Light tan -->
               <path d="M 60,-103.92 A 120,120 0 0,1 103.92,-60 L 51.96,-30 A 60,60 0 0,0 30,-51.96 Z" 
-                    fill="#e8d4a8" filter="url(#shadow)" class="segment"/>
-              <text x="90" y="-120" text-anchor="start" font-size="8" fill="#8b7355">Financial</text>
-              <text x="90" y="-111" text-anchor="start" font-size="8" fill="#8b7355">Coaching</text>
+                    fill="#ead8c0" filter="url(#shadow)" class="segment"/>
+              <text x="64" y="-67" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Succession</text>
+              <text x="64" y="-58" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Planning</text>
               
-              <!-- Segment 3: Philanthropic Counsel (60-90°) -->
+              <!-- Segment 3: Investment Services (60-90°) - Medium tan -->
               <path d="M 103.92,-60 A 120,120 0 0,1 120,0 L 60,0 A 60,60 0 0,0 51.96,-30 Z" 
-                    fill="#dcc898" filter="url(#shadow)" class="segment"/>
-              <text x="138" y="-35" text-anchor="start" font-size="7" fill="#8b7355">Philanthropic</text>
-              <text x="138" y="-26" text-anchor="start" font-size="7" fill="#8b7355">Counsel</text>
+                    fill="#dcc8a8" filter="url(#shadow)" class="segment"/>
+              <text x="87" y="-26" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Investment</text>
+              <text x="87" y="-17" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Services</text>
               
-              <!-- Segment 4: Tax Planning (90-120°) -->
+              <!-- Segment 4: Real Estate III (90-120°) - Gold -->
               <path d="M 120,0 A 120,120 0 0,1 103.92,60 L 51.96,30 A 60,60 0 0,0 60,0 Z" 
-                    fill="#d4af37" filter="url(#shadow)" class="segment"/>
-              <text x="145" y="-5" text-anchor="start" font-size="8" fill="#ffffff">Tax</text>
-              <text x="145" y="5" text-anchor="start" font-size="8" fill="#ffffff">Planning</text>
+                    fill="#c9a961" filter="url(#shadow)" class="segment"/>
+              <text x="87" y="20" text-anchor="middle" font-size="8" fill="#ffffff" font-weight="600">Real</text>
+              <text x="87" y="30" text-anchor="middle" font-size="8" fill="#ffffff" font-weight="600">Estate III</text>
               
-              <!-- Segment 5: Investment Advisory (120-150°) -->
+              <!-- Segment 5: Concierge & Reporting (120-150°) - Dark gold -->
               <path d="M 103.92,60 A 120,120 0 0,1 60,103.92 L 30,51.96 A 60,60 0 0,0 51.96,30 Z" 
-                    fill="#c9a332" filter="url(#shadow)" class="segment"/>
-              <text x="138" y="38" text-anchor="start" font-size="7" fill="#ffffff">Investment</text>
-              <text x="138" y="47" text-anchor="start" font-size="7" fill="#ffffff">Advisory</text>
+                    fill="#b8994d" filter="url(#shadow)" class="segment"/>
+              <text x="64" y="61" text-anchor="middle" font-size="7" fill="#ffffff" font-weight="600">Concierge</text>
+              <text x="64" y="70" text-anchor="middle" font-size="7" fill="#ffffff" font-weight="600">& Reporting</text>
               
-              <!-- Segment 6: Lifestyle Management (150-180°) -->
+              <!-- Segment 6: Medical Counseling (150-180°) - Medium gold -->
               <path d="M 60,103.92 A 120,120 0 0,1 0,120 L 0,60 A 60,60 0 0,0 30,51.96 Z" 
-                    fill="#b8941f" filter="url(#shadow)" class="segment"/>
-              <text x="90" y="123" text-anchor="start" font-size="7" fill="#ffffff">Lifestyle</text>
-              <text x="90" y="132" text-anchor="start" font-size="7" fill="#ffffff">Management</text>
+                    fill="#c9a961" filter="url(#shadow)" class="segment"/>
+              <text x="23" y="90" text-anchor="middle" font-size="7.5" fill="#ffffff" font-weight="600">Medical</text>
+              <text x="23" y="99" text-anchor="middle" font-size="7.5" fill="#ffffff" font-weight="600">Counseling</text>
               
-              <!-- Segment 7: Family Governance (180-210°) -->
+              <!-- Segment 7: Tax Planning (180-210°) - Light gold/tan -->
               <path d="M 0,120 A 120,120 0 0,1 -60,103.92 L -30,51.96 A 60,60 0 0,0 0,60 Z" 
-                    fill="#a68419" filter="url(#shadow)" class="segment"/>
-              <text x="-30" y="145" text-anchor="middle" font-size="8" fill="#ffffff">Family</text>
-              <text x="-30" y="155" text-anchor="middle" font-size="8" fill="#ffffff">Governance</text>
+                    fill="#d4b574" filter="url(#shadow)" class="segment"/>
+              <text x="-23" y="90" text-anchor="middle" font-size="8" fill="#ffffff" font-weight="600">Tax</text>
+              <text x="-23" y="99" text-anchor="middle" font-size="8" fill="#ffffff" font-weight="600">Planning</text>
               
-              <!-- Segment 8: Risk Management (210-240°) -->
+              <!-- Segment 8: Philanthropy (210-240°) - Medium tan -->
               <path d="M -60,103.92 A 120,120 0 0,1 -103.92,60 L -51.96,30 A 60,60 0 0,0 -30,51.96 Z" 
-                    fill="#d4af37" filter="url(#shadow)" class="segment"/>
-              <text x="-90" y="123" text-anchor="end" font-size="7" fill="#ffffff">Risk</text>
-              <text x="-90" y="132" text-anchor="end" font-size="7" fill="#ffffff">Management</text>
+                    fill="#dcc8a8" filter="url(#shadow)" class="segment"/>
+              <text x="-64" y="68" text-anchor="middle" font-size="8" fill="#7d6e5c" font-weight="500">Philanthropy</text>
               
-              <!-- Segment 9: Insurance Coordination (240-270°) -->
+              <!-- Segment 9: Trust Concerns (240-270°) - Light tan -->
               <path d="M -103.92,60 A 120,120 0 0,1 -120,0 L -60,0 A 60,60 0 0,0 -51.96,30 Z" 
-                    fill="#dcc898" filter="url(#shadow)" class="segment"/>
-              <text x="-138" y="38" text-anchor="end" font-size="7" fill="#8b7355">Insurance</text>
-              <text x="-138" y="47" text-anchor="end" font-size="7" fill="#8b7355">Coordination</text>
+                    fill="#ead8c0" filter="url(#shadow)" class="segment"/>
+              <text x="-87" y="26" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Trust</text>
+              <text x="-87" y="35" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Concerns</text>
               
-              <!-- Segment 10: Concierge Services (270-300°) -->
+              <!-- Segment 10: Risk Management (270-300°) - Very light beige -->
               <path d="M -120,0 A 120,120 0 0,1 -103.92,-60 L -51.96,-30 A 60,60 0 0,0 -60,0 Z" 
-                    fill="#e8d4a8" filter="url(#shadow)" class="segment"/>
-              <text x="-145" y="-5" text-anchor="end" font-size="7" fill="#8b7355">Concierge</text>
-              <text x="-145" y="5" text-anchor="end" font-size="7" fill="#8b7355">Services</text>
+                    fill="#f5e6d3" filter="url(#shadow)" class="segment"/>
+              <text x="-87" y="-20" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Risk</text>
+              <text x="-87" y="-11" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Management</text>
               
-              <!-- Segment 11: Education & Coaching (300-330°) -->
+              <!-- Segment 11: Estate Planning (300-330°) - Light beige -->
               <path d="M -103.92,-60 A 120,120 0 0,1 -60,-103.92 L -30,-51.96 A 60,60 0 0,0 -51.96,-30 Z" 
-                    fill="#f4e4b8" filter="url(#shadow)" class="segment"/>
-              <text x="-90" y="-120" text-anchor="end" font-size="7" fill="#8b7355">Education &</text>
-              <text x="-90" y="-111" text-anchor="end" font-size="7" fill="#8b7355">Coaching</text>
+                    fill="#ead8c0" filter="url(#shadow)" class="segment"/>
+              <text x="-64" y="-63" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Estate</text>
+              <text x="-64" y="-54" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Planning</text>
               
-              <!-- Segment 12: Legacy Preservation (330-360°) -->
+              <!-- Segment 12: Trust & Foundations (330-360°) - Very light tan -->
               <path d="M -60,-103.92 A 120,120 0 0,1 0,-120 L 0,-60 A 60,60 0 0,0 -30,-51.96 Z" 
-                    fill="#f9f3e6" filter="url(#shadow)" class="segment"/>
-              <text x="-30" y="-145" text-anchor="middle" font-size="8" fill="#8b7355">Legacy</text>
-              <text x="-30" y="-135" text-anchor="middle" font-size="8" fill="#8b7355">Preservation</text>
+                    fill="#f0ddc5" filter="url(#shadow)" class="segment"/>
+              <text x="-23" y="-87" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Trust &</text>
+              <text x="-23" y="-78" text-anchor="middle" font-size="7.5" fill="#7d6e5c" font-weight="500">Foundations</text>
               
               <!-- Center circle (donut hole) -->
               <circle cx="0" cy="0" r="60" fill="#ffffff" filter="url(#shadow)"/>
               
-              <!-- Center text -->
-              <text x="0" y="-5" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2937">360°</text>
-              <text x="0" y="12" text-anchor="middle" font-size="13" fill="#64748b">Bespoke Plan</text>
+              <!-- Center text - matching the image -->
+              <text x="0" y="-18" text-anchor="middle" font-size="13" fill="#7d6e5c" font-weight="400">A 360° Degree</text>
+              <text x="0" y="0" text-anchor="middle" font-size="16" fill="#1f2937" font-weight="700">Bespoke Plan</text>
             </g>
           </svg>
         </div>
@@ -471,7 +470,7 @@ import Card from '../components/Card.astro';
         <div class="absolute inset-0 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent group-hover:animate-pulse"></div>
         <span class="relative z-10 flex items-center">
-          Meet Our Full Team
+          Learn more
           <svg class="ml-3 w-5 h-5 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
@@ -648,8 +647,8 @@ import Card from '../components/Card.astro';
   }
 
   .donut-chart-wrapper {
-    width: 400px;
-    height: 400px;
+    width: 560px;
+    height: 560px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -683,8 +682,8 @@ import Card from '../components/Card.astro';
 
   @media (max-width: 768px) {
     .donut-chart-wrapper {
-      width: 320px;
-      height: 320px;
+      width: 420px;
+      height: 420px;
     }
     
     .segment-label-outer {
@@ -698,8 +697,8 @@ import Card from '../components/Card.astro';
 
   @media (max-width: 480px) {
     .donut-chart-wrapper {
-      width: 280px;
-      height: 280px;
+      width: 360px;
+      height: 360px;
     }
   }
 </style>

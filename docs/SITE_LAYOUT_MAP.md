@@ -192,7 +192,7 @@ Page    Approach    Alignment
 │    Detailed bios & credentials         │
 ├─────────────────────────────────────────┤
 │            Contact CTA                 │
-│        "Meet Our Full Team"            │
+│        "Learn more"            │
 ├─────────────────────────────────────────┤
 │              Footer                    │
 └─────────────────────────────────────────┘

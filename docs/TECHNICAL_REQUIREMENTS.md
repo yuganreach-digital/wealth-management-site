@@ -34,9 +34,9 @@ This document outlines all placeholders and client information required to compl
 - **Action Needed**: Verify and sync phone number across all files
 - **Priority**: High
 
-**Email Address**: Currently set to `info@avitafos.com`
+**Email Address**: Currently set to ` contact@avitafos.com`
 - **Files**: `src/layouts/BaseLayout.astro` (structured data), `src/components/Footer.astro`
-- **Current**: `info@yourwealthsite.com` in structured data, `info@avitafos.com` in footer
+- **Current**: `info@yourwealthsite.com` in structured data, ` contact@avitafos.com` in footer
 - **Action Needed**: Update structured data to match footer
 - **Priority**: High
 
